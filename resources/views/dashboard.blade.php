@@ -37,7 +37,7 @@
                 <div class="sidebar-brand-icon">
                     <i class="fas fa-archive"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">INVENTIK BBPVP Makassar</div>
+                <div class="sidebar-brand-text mx-3">INVENTIK BBPVP MAKASSAR</div>
             </a>
 
             <!-- Divider -->
