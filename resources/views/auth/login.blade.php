@@ -43,10 +43,10 @@
                                             <input type="text" class="form-control form-control-user"
                                                 placeholder="Masukkan Nama Anda" name="nama">
                                         </div>
-                                        <div class="form-group">
+                                        {{-- <div class="form-group">
                                             <input type="email" class="form-control form-control-user"
                                                 placeholder="Masukkan Email Anda" name="email">
-                                        </div>
+                                        </div> --}}
                                         <div class="form-group">
                                             <input type="password" class="form-control form-control-user"
                                                 placeholder="Masukkan Password Anda" name="password">
