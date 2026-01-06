@@ -47,7 +47,6 @@
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="#hero" class="active">Beranda</a></li>
-          <li><a href="#about">Tentang Kami</a></li>
           <li><a href="#contact">Kontak</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -67,9 +66,9 @@
         <div class="row gy-4">
           <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="fade-up">
             <h1>INVENTIK BBPVP MAKASSAR</h1>
-            <p>Website Sistem Inventaris Peralatan TIK</p>
+            <p>Website Sistem Inventaris Kejuruan TIK</p>
             <div class="d-flex">
-              <a href="#about" class="btn-get-started">Login</a>
+              <a href="{{ route('login') }}" class="btn-get-started">Login</a>
             </div>
           </div>
           <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="100">
@@ -84,15 +83,15 @@
     <section id="about" class="about section">
 
       <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
+      {{--<div class="container section-title" data-aos="fade-up">
         <span>Tentang Kami<br></span>
         <h2>Tentang Kami</h2>
-        <p>Lorem Ipsum</p>
-      </div><!-- End Section Title -->
+        <h2>Kejuruan TIK BBPVP Makassar</h2>
+      </div><!-- End Section Title -->--}}
 
       <div class="container">
 
-        <div class="row gy-4">
+        {{--<div class="row gy-4">
           <div class="col-lg-6 position-relative align-self-start" data-aos="fade-up" data-aos-delay="100">
             <img src="assets/img/about.png" class="img-fluid" alt="">
             <a href="https://www.youtube.com/watch?v=jMrLrfUtnNw" class="glightbox pulsating-play-btn"></a>
@@ -113,7 +112,7 @@
               velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident
             </p>
           </div>
-        </div>
+        </div>--}}
 
       </div>
 
@@ -124,7 +123,6 @@
       <div class="container section-title" data-aos="fade-up">
         <span>Kontak</span>
         <h2>Kontak</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -151,10 +149,18 @@
               </div><!-- End Info Item -->
 
               <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-                <i class="bi bi-envelope flex-shrink-0"></i>
+                <i class="bi bi-globe flex-shrink-0"></i>
                 <div>
                   <h3>Website</h3>
                   <p><a href="https://bbpvpmakassar.kemnaker.go.id/" target="_blank">https://bbpvpmakassar.kemnaker.go.id/</a></p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                <i class="bi bi-instagram flex-shrink-0"></i>
+                <div>
+                  <h3>Sosial Media</h3>
+                  <p><a href="https://www.instagram.com/tik.bbpvpmakassar/" target="_blank">https://www.instagram.com/tik.bbpvpmakassar/</a></p>
                 </div>
               </div><!-- End Info Item -->
 
