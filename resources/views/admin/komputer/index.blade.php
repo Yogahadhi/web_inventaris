@@ -35,14 +35,25 @@
                         <tr class ="text-center">
                             <th>ID Perangkat</th>
                             <th>Nama</th>
-                            <th>Kategori</th>
                             <th>Merek</th>
                             <th>Model</th>
+                            <th>CPU</th>
+                            <th>Kapasitas RAM</th>
+                            <th>Jenis RAM</th>
+                            <th>Kapasitas Penyimpanan</th>
+                            <th>Jenis Penyimpanan</th>
+                            <th>VGA</th>
+                            <th>Jaringan</th>
+                            <th>Motherboard</th>
+                            <th>PSU</th>
+                            <th>Sistem Operasi</th>
                             <th>Kondisi</th>
-                            <th>Lokasi</th>
+                            <th>Status Teknis</th>
                             <th>Tanggal Pengecekan</th>
                             <th>Operator</th>
                             <th>Keterangan</th>
+                            <th>Fungsi Print</th>
+                            <th>Kemampuan Desain</th>
                             <th>
                                 <i class="fas fa-cog"></i>
                             </th>
