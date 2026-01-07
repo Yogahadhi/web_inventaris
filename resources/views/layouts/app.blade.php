@@ -57,7 +57,7 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                MENU ADMIN
+                MENU ADMI
             </div>
 
             <!-- Nav Item - Tables -->
