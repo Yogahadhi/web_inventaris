@@ -76,8 +76,8 @@
             </div>
 
             <!-- Nav Item - Charts -->
-            <li class="nav-item">
-                <a class="nav-link" href="charts.html">
+            <li class="nav-item {{ $menuLaporan ?? '' }}">
+                <a class="nav-link" href="{{ route('laporan') }}">
                     <i class="fas fa-clipboard-list"></i>
                     <span>Laporan Inventaris</span></a>
             </li>

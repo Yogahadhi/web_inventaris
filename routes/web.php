@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\LaporanController;
 use App\Http\Controllers\DashboardController;
 
 Route::get('/', function () {
@@ -11,12 +12,19 @@ Route::get('/', function () {
 name('welcome');
 ;
 
+//Dashboard
 Route::get('dashboard',[DashboardController::class,'index'])->
 name('dashboard');
 
+//Login
 Route::get('login',[AuthController::class,'login'])->
 name('login');
 
+//User
 Route::get('user',[UserController::class,'index'])->
 name('user');
+
+//Laporan
+Route::get('laporan',[LaporanController::class,'index'])->
+name('laporan');
 
