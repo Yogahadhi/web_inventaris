@@ -82,6 +82,13 @@
                     <span>Laporan Inventaris</span></a>
             </li>
 
+            <!-- Nav Item - Charts -->
+            <li class="nav-item {{ $menuDataKomputer ?? '' }}">
+                <a class="nav-link" href="{{ route('komputer') }}">
+                    <i class="fas fa-desktop"></i>
+                    <span>Data Komputer</span></a>
+            </li>
+
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 
