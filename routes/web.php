@@ -19,6 +19,10 @@ name('login');
 Route::post('login',[AuthController::class,'loginProses'])->
 name('loginProses');
 
+//Logout
+Route::get('logout',[AuthController::class,'logout'])->
+name('logout');
+
 
 Route::middleware('checkLogin')->group(function () {
     //Dashboard
@@ -34,3 +38,5 @@ Route::middleware('checkLogin')->group(function () {
     Route::get('komputer',[DataKomputer::class,'index'])->
     name('komputer');
 });
+
+
