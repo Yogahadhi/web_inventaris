@@ -33,6 +33,7 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead class="bg-primary text-white">
                         <tr class ="text-center">
+                            <th>No</th>
                             <th>Nama</th>
                             {{-- <th>Email</th> --}}
                             <th>Jabatan</th>
@@ -44,6 +45,7 @@
                     </thead>
                     <tbody>
                         <tr>
+                            <th class="text-center">1</th>
                             <td>Muh Yoga</td>
                             {{-- <td>yogazen137@gmail.com</td> --}}
                             <td>Magang</td>

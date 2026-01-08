@@ -33,6 +33,7 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead class="bg-primary text-white">
                         <tr class ="text-center">
+                            <th>No</th>
                             <th>ID Perangkat</th>
                             <th>Nama</th>
                             <th>Merek</th>
@@ -61,20 +62,30 @@
                     </thead>
                     <tbody>
                         <tr>
+                            <th class="text-center">1</th>
                             <td>PC-25-004</td>
                             <td>Komputer Ruang Perakitan</td>
-                            <td class="text-center">
-                                <span class="badge badge-success badge-pill">Komputer
-                                </span></td>
                             <td>HP</td>
-                            <td >HP Pavilion Slimline</td>
+                            <td>PC Build Up</td>
+                            <td>Intel Core i5-2500S</td>
+                            <td>4 GB</td>
+                            <td>DDR 4</td>
+                            <td>500 gb</td>
+                            <td>HDD</td>
+                            <td>ATI ATOMBIOS HD5450</td>
+                            <td>Wifi dan LAN</td>
+                            <td>Asus H110M-E</td>
+                            <td>Simbadda SB-380W</td>
+                            <td>Windows 10</td>
                             <td class="text-center">
                                 <span class="badge badge-success badge-pill">Layak Pakai
                                 </span></td>
-                            <td>Ruang Perakitan</td>
-                            <td>26/11/2025</td>
-                            <td>Yoga</td>
-                            <td>Hanya ada bunyi kipas</td>
+                            <td>HDD Error</td>
+                            <td>16/12/2025</td>
+                            <td>Fajar</td>
+                            <td>HDD tidak terbaca dan perlu instalasi MS Office</td>
+                            <td>Tidak bisa</td>
+                            <td>Tidak bisa</td>
                             <td class="text-center">
                                 <a href="#" class="btn btn-warning btn-sm">
                                     <i class="fas fa-edit"></i>

@@ -33,6 +33,7 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead class="bg-primary text-white">
                         <tr class ="text-center">
+                            <th>No</th>
                             <th>ID Perangkat</th>
                             <th>Nama</th>
                             <th>Kategori</th>
@@ -50,6 +51,7 @@
                     </thead>
                     <tbody>
                         <tr>
+                            <th class="text-center">1</th>
                             <td>PC-25-004</td>
                             <td>Komputer Ruang Perakitan</td>
                             <td class="text-center">
