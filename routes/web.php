@@ -29,15 +29,25 @@ Route::middleware('checkLogin')->group(function () {
     //Dashboard
     Route::get('dashboard',[DashboardController::class,'index'])->
     name('dashboard');
+
     //User
     Route::get('user',[UserController::class,'index'])->
     name('user');
+    //UserCreate
+    Route::get('user/create',[UserController::class,'create'])->
+    name('userCreate');
+    //UserStore
+    Route::post('user/store',[UserController::class,'store'])->
+    name('userStore');
+
     //Laporan
     Route::get('laporan',[LaporanController::class,'index'])->
     name('laporan');
+
     //Data Komputer
     Route::get('komputer',[DataKomputer::class,'index'])->
     name('komputer');
+
     //Stock Opname
     Route::get('stock-opname',[StockOpname::class,'index'])->
     name('stock-opname');

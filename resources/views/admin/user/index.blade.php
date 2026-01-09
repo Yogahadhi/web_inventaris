@@ -11,7 +11,7 @@
     <div class="card">
         <div class="card-header d-flex flex-wrap justify-content-center justify-content-between">
             <div class="mb-1 mr-2">
-                <a href="#" class="btn btn-primary btn-sm">
+                <a href="{{ route('userCreate') }}" class="btn btn-primary btn-sm">
                     <i class="fas fa-plus mr-2"></i>
                     Tambah Data
                 </a>
