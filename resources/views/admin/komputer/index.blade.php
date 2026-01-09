@@ -10,12 +10,12 @@
 
     <div class="card">
         <div class="card-header d-flex flex-wrap justify-content-center justify-content-between">
-            <div class="mb-1 mr-2">
+            {{--<div class="mb-1 mr-2">
                 <a href="#" class="btn btn-primary btn-sm">
                     <i class="fas fa-plus mr-2"></i>
                     Tambah Data
                 </a>
-            </div>
+            </div>--}}
             <div>
                 <a href="#" class="btn btn-success btn-sm">
                     <i class="fas fa-file-excel mr-2"></i>
@@ -35,7 +35,7 @@
                         <tr class ="text-center">
                             <th>No</th>
                             <th>ID Perangkat</th>
-                            <th>Nama</th>
+                            <th>Lokasi</th>
                             <th>Merek</th>
                             <th>Model</th>
                             <th>CPU</th>
@@ -78,7 +78,7 @@
                             <td>Simbadda SB-380W</td>
                             <td>Windows 10</td>
                             <td class="text-center">
-                                <span class="badge badge-success badge-pill">Layak Pakai
+                                <span class="badge badge-warning badge-pill">Perlu Perbaikan
                                 </span></td>
                             <td>HDD Error</td>
                             <td>16/12/2025</td>

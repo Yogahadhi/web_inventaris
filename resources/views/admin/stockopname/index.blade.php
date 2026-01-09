@@ -4,7 +4,7 @@
 
     <!-- Page Heading -->
     <h1 class="h3 mb-4 text-gray-800">
-        <i class="fas fa-clipboard-list mr-2"></i>
+        <i class="fas fa-boxes mr-2"></i>
         {{ $title }}
     </h1>
 
@@ -34,15 +34,11 @@
                     <thead class="bg-primary text-white">
                         <tr class ="text-center">
                             <th>No</th>
-                            <th>ID Perangkat</th>
-                            <th>Nama</th>
                             <th>Kategori</th>
-                            <th>Merek</th>
-                            <th>Model</th>
+                            <th>Nama Barang</th>
+                            <th>Jumlah Barang</th>
+                            <th>lokasi</th>
                             <th>Kondisi</th>
-                            <th>Lokasi</th>
-                            <th>Tanggal Pengecekan</th>
-                            <th>Operator</th>
                             <th>Keterangan</th>
                             <th>
                                 <i class="fas fa-cog"></i>
@@ -52,20 +48,15 @@
                     <tbody>
                         <tr>
                             <th class="text-center">1</th>
-                            <td>PC-25-004</td>
-                            <td>Komputer Ruang Perakitan</td>
-                            <td class="text-center">
-                                <span class="badge badge-success badge-pill">Komputer
-                                </span></td>
-                            <td>HP</td>
-                            <td >HP Pavilion Slimline</td>
-                            <td class="text-center">
-                                <span class="badge badge-success badge-pill">Layak Pakai
-                                </span></td>
+                            <td>Map</td>
+                            <td>Map Plastik Kuning</td>
+                            <td class="text-center">10</td>
                             <td>Ruang Perakitan</td>
-                            <td>26/11/2025</td>
-                            <td>Yoga</td>
-                            <td>Hanya ada bunyi kipas</td>
+                            <td class="text-center">
+                                <span class="badge badge-success badge-pill">Baik
+                                </span>
+                            </td>
+                            <td>Terdapat di lemari ruang perakitan</td>
                             <td class="text-center">
                                 <a href="#" class="btn btn-warning btn-sm">
                                     <i class="fas fa-edit"></i>

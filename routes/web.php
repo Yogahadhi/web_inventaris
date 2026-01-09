@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\StockOpname;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DataKomputer;
 use App\Http\Controllers\AuthController;
@@ -37,6 +38,9 @@ Route::middleware('checkLogin')->group(function () {
     //Data Komputer
     Route::get('komputer',[DataKomputer::class,'index'])->
     name('komputer');
+    //Stock Opname
+    Route::get('stock-opname',[StockOpname::class,'index'])->
+    name('stock-opname');
 });
 
 

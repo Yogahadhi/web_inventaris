@@ -56,6 +56,13 @@
                     <span>Data Komputer</span></a>
             </li>
 
+             <!--Nav Item - Charts -->
+            <li class="nav-item {{ $menuStockOpname ?? '' }}">
+                <a class="nav-link" href="{{ route('stock-opname') }}">
+                    <i class="fas fa-boxes"></i>
+                    <span>Stok Opname</span></a>
+            </li>
+
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 
