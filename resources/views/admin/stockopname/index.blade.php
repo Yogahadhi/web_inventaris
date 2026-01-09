@@ -38,6 +38,7 @@
                             <th>Nama Barang</th>
                             <th>Jumlah Barang</th>
                             <th>lokasi</th>
+                            <th>Tanggal Pengecekan</th>
                             <th>Kondisi</th>
                             <th>Keterangan</th>
                             <th>
@@ -52,6 +53,7 @@
                             <td>Map Plastik Kuning</td>
                             <td class="text-center">10</td>
                             <td>Ruang Perakitan</td>
+                            <td>1/9/2026</td>
                             <td class="text-center">
                                 <span class="badge badge-success badge-pill">Baik
                                 </span>
