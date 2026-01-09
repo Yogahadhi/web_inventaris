@@ -16,7 +16,7 @@ return new class extends Migration
             //$table->integer('no');
             $table->string('name');
             $table->string('jabatan');
-            $table->enum('jenis akun', ['Admin', 'Operator']);
+            $table->enum('jenis_akun', ['Admin', 'Operator']);
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();

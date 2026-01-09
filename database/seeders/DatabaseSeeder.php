@@ -21,8 +21,22 @@ class DatabaseSeeder extends Seeder
         User::create([
             'name'          => 'Test Admin',
             'jabatan'       => 'Magang',
-            'jenis akun'    => 'Admin',
+            'jenis_akun'    => 'Admin',
             'password'      => Hash::make('654321'),
+        ]);
+
+        User::create([
+            'name'          => 'Yoga',
+            'jabatan'       => 'Magang',
+            'jenis_akun'    => 'Operator',
+            'password'      => Hash::make('123456'),
+        ]);
+
+        User::create([
+            'name'          => 'Fajar',
+            'jabatan'       => 'Magang',
+            'jenis_akun'    => 'Operator',
+            'password'      => Hash::make('123123'),
         ]);
     }
 }

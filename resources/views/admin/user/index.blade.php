@@ -10,12 +10,12 @@
 
     <div class="card">
         <div class="card-header d-flex flex-wrap justify-content-center justify-content-between">
-            <div class="mb-1 mr-2">
+            {{--<div class="mb-1 mr-2">
                 <a href="#" class="btn btn-primary btn-sm">
                     <i class="fas fa-plus mr-2"></i>
                     Tambah Data
                 </a>
-            </div>
+            </div>--}}
             <div>
                 <a href="#" class="btn btn-success btn-sm">
                     <i class="fas fa-file-excel mr-2"></i>
@@ -35,7 +35,6 @@
                         <tr class ="text-center">
                             <th>No</th>
                             <th>Nama</th>
-                            {{-- <th>Email</th> --}}
                             <th>Jabatan</th>
                             <th>Jenis Akun</th>
                             <th>
@@ -44,23 +43,33 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th class="text-center">1</th>
-                            <td>Muh Yoga</td>
-                            {{-- <td>yogazen137@gmail.com</td> --}}
-                            <td>Magang</td>
-                            <td class="text-center">
-                                <span class="badge badge-success badge-pill">Operator
-                                </span></td>
-                            <td class="text-center">
-                                <a href="#" class="btn btn-warning btn-sm">
-                                    <i class="fas fa-edit"></i>
-                                </a>
-                                <a href="#" class="btn btn-danger btn-sm">
-                                    <i class="fas fa-trash"></i>
-                                </a>
-                            </td>
-                        </tr>          
+                        @foreach ($user as $item)
+                            <tr>
+                                <td class="text-center">{{ $loop->iteration }}</td>
+                                <td>{{ $item->name }}</td>
+                                <td class="text-center">
+                                    <span class="badge badge-primary">
+                                        {{ $item->jabatan }}</span>
+                                </td>
+                                <td class="text-center">
+                                    @if ($item->jenis_akun == 'Admin')
+                                        <span class="badge badge-dark">
+                                            {{ $item->jenis_akun }}
+                                    @else 
+                                        <span class="badge badge-info">
+                                            {{ $item->jenis_akun }}
+                                    @endif
+                                </td>
+                                <td class="text-center">
+                                    <a href="#" class="btn btn-warning btn-sm">
+                                        <i class="fas fa-edit"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-danger btn-sm">
+                                        <i class="fas fa-trash"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>
