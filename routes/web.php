@@ -39,6 +39,12 @@ Route::middleware('checkLogin')->group(function () {
     //UserStore
     Route::post('user/store',[UserController::class,'store'])->
     name('userStore');
+    //UserEdit
+    Route::get('user/edit/{id}',[UserController::class,'edit'])->
+    name('userEdit');
+    //UserUpdate
+    Route::post('user/update/{id}',[UserController::class,'update'])->
+    name('userUpdate');
 
     //Laporan
     Route::get('laporan',[LaporanController::class,'index'])->

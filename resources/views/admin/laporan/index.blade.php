@@ -44,9 +44,6 @@
                             <th>Tanggal Pengecekan</th>
                             <th>Operator</th>
                             <th>Keterangan</th>
-                            <th>
-                                <i class="fas fa-cog"></i>
-                            </th>
                         </tr>
                     </thead>
                     <tbody>
@@ -66,14 +63,6 @@
                             <td>26/11/2025</td>
                             <td>Yoga</td>
                             <td>Hanya ada bunyi kipas</td>
-                            <td class="text-center">
-                                <a href="#" class="btn btn-warning btn-sm">
-                                    <i class="fas fa-edit"></i>
-                                </a>
-                                <a href="#" class="btn btn-danger btn-sm">
-                                    <i class="fas fa-trash"></i>
-                                </a>
-                            </td>
                         </tr>          
                     </tbody>
                 </table>

@@ -4,12 +4,12 @@
 
     <!-- Page Heading -->
     <h1 class="h3 mb-4 text-gray-800">
-        <i class="fas fa-user-plus mr-2"></i>
+        <i class="fas fa-user-edit mr-2"></i>
         {{ $title }}
     </h1>
 
     <div class="card">
-        <div class="card-header bg-primary">
+        <div class="card-header bg-warning">
             <a href="{{ route('user') }}" class="btn btn-success btn-sm">
                 <i class="fas fa-arrow-left mr-2"></i>
                 Kembali
@@ -18,7 +18,7 @@
 
         <div class="card-body">
 
-            <form action="{{ route('userStore') }}" method="post">
+            <form action="{{ route('userUpdate', $user->id) }}" method="post">
                 @csrf
                 <div class="row mb-2">
                     <div class="col-xl-6 mb-2">
@@ -26,7 +26,7 @@
                             <span class="text-danger">*</span>
                             Nama Akun :
                         </label>
-                        <input type="text" name="name" class="form-control @error('name') is-invalid @enderror" value="{{ old('name') }}">
+                        <input type="text" name="name" class="form-control @error('name') is-invalid @enderror" value="{{ $user->name }}">
                         @error('name')
                             <small class="text-danger">{{ $message }}</small>
                         @enderror
@@ -36,7 +36,7 @@
                             <span class="text-danger">*</span>
                             Jabatan :
                         </label>
-                        <input type="text" name="jabatan" class="form-control @error('jabatan') is-invalid @enderror" value="{{ old('jabatan') }}">
+                        <input type="text" name="jabatan" class="form-control @error('jabatan') is-invalid @enderror" value="{{ $user->jabatan }}">
                         @error('jabatan')
                             <small class="text-danger">{{ $message }}</small>
                         @enderror
@@ -49,9 +49,11 @@
                             Jenis Akun :
                         </label>
                         <select name="jenis_akun" class="form-control @error('jenis_akun') is-invalid @enderror">
-                            <option selected disabled>--Pilih Jenis Akun--</option>
-                            <option value="Admin">Admin</option>
-                            <option value="Operator">Operator</option>
+                            <option disabled>--Pilih Jenis Akun--</option>
+                            <option value="Admin" {{ $user->jenis_akun == 'Admin' ? 
+                            'selected' : ''}}>Admin</option>
+                            <option value="Operator" {{ $user->jenis_akun == 'Operator' ? 
+                            'selected' : ''}}>Operator</option>
                         </select>
                         @error('jenis_akun')
                             <small class="text-danger">{{ $message }}</small>
@@ -79,9 +81,9 @@
                 </div>
 
                 <div>
-                    <button type="submit" class="btn btn-primary">
-                        <i class="fas fa-save mr-2"></i>
-                        Simpan
+                    <button type="submit" class="btn btn-warning">
+                        <i class="fas fa-user-edit mr-2"></i>
+                        Edit
                     </button>
                 </div>
             </form>

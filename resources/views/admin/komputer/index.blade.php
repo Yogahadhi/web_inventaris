@@ -55,9 +55,6 @@
                             <th>Keterangan</th>
                             <th>Fungsi Print</th>
                             <th>Kemampuan Desain</th>
-                            <th>
-                                <i class="fas fa-cog"></i>
-                            </th>
                         </tr>
                     </thead>
                     <tbody>
@@ -86,14 +83,6 @@
                             <td>HDD tidak terbaca dan perlu instalasi MS Office</td>
                             <td>Tidak bisa</td>
                             <td>Tidak bisa</td>
-                            <td class="text-center">
-                                <a href="#" class="btn btn-warning btn-sm">
-                                    <i class="fas fa-edit"></i>
-                                </a>
-                                <a href="#" class="btn btn-danger btn-sm">
-                                    <i class="fas fa-trash"></i>
-                                </a>
-                            </td>
                         </tr>          
                     </tbody>
                 </table>

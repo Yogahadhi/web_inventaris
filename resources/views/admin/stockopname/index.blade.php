@@ -41,9 +41,6 @@
                             <th>Tanggal Pengecekan</th>
                             <th>Kondisi</th>
                             <th>Keterangan</th>
-                            <th>
-                                <i class="fas fa-cog"></i>
-                            </th>
                         </tr>
                     </thead>
                     <tbody>
@@ -59,14 +56,6 @@
                                 </span>
                             </td>
                             <td>Terdapat di lemari ruang perakitan</td>
-                            <td class="text-center">
-                                <a href="#" class="btn btn-warning btn-sm">
-                                    <i class="fas fa-edit"></i>
-                                </a>
-                                <a href="#" class="btn btn-danger btn-sm">
-                                    <i class="fas fa-trash"></i>
-                                </a>
-                            </td>
                         </tr>          
                     </tbody>
                 </table>
