@@ -12,6 +12,6 @@ class DataKomputer extends Controller
             'title'         => 'Data Komputer',
             'menuDataKomputer' => 'active',
         );
-        return view('admin/komputer/index',$data);
+        return view('admin.komputer.index',$data);
     }
 }

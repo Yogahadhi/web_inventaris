@@ -12,6 +12,6 @@ class StockOpname extends Controller
             'title'             => 'Stock Opname',
             'menuStockOpname'   => 'active',
         );
-        return view('admin/stockopname/index',$data);
+        return view('admin.stockopname.index',$data);
     }
 }

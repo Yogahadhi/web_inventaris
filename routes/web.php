@@ -45,6 +45,9 @@ Route::middleware('checkLogin')->group(function () {
     //UserUpdate
     Route::post('user/update/{id}',[UserController::class,'update'])->
     name('userUpdate');
+    //UserDelete
+    Route::delete('user/destroy/{id}',[UserController::class,'destroy'])->
+    name('userDestroy');
 
     //Laporan
     Route::get('laporan',[LaporanController::class,'index'])->

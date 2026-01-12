@@ -15,7 +15,7 @@ class UserController extends Controller
             'menuAdminUser' => 'active',
             'user'          => User::orderBy('jenis_akun','asc')->get(),    
         );
-        return view('admin/user/index',$data);
+        return view('admin.user.index',$data);
     }
 
     public function create()
@@ -24,7 +24,7 @@ class UserController extends Controller
             'title'         => 'Tambah Data Pengguna',
             'menuAdminUser' => 'active',    
         );
-        return view('admin/user/create',$data);
+        return view('admin.user.create',$data);
     }
 
     public function store(Request $request)
@@ -64,7 +64,7 @@ class UserController extends Controller
             'menuAdminUser' => 'active',    
             'user'          => User::findOrFail($id),
         );
-        return view('admin/user/edit',$data);
+        return view('admin.user.edit',$data);
     }
 
     public function update(Request $request, $id)
@@ -95,5 +95,12 @@ class UserController extends Controller
          $user->save();
 
          return redirect()->route('user')->with('success','Data pengguna berhasil diubah');
+    }
+
+    public function destroy($id){
+        $user = User::findOrFail($id);
+        $user->delete();
+
+        return redirect()->route('user')->with('success','Data pengguna berhasil dihapus');
     }
 }

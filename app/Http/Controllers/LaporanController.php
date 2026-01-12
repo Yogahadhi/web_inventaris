@@ -12,6 +12,6 @@ class LaporanController extends Controller
             'title'         => 'Laporan Inventaris',
             'menuLaporan'   => 'active',
         );
-        return view('admin/laporan/index',$data);
+        return view('admin.laporan.index',$data);
     }
 }
