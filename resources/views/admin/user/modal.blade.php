@@ -14,7 +14,7 @@
                 Nama
             </div>
             <div class="col-6">
-                : {{ $item->name }}
+                : <span class="badge badge-success">{{ $item->name }}</span>
             </div>
         </div>
         <div class="row">
@@ -28,7 +28,7 @@
         </div>
         <div class="row">
             <div class="col-6">
-                jenis Akun
+                Jenis Akun
             </div>
             <div class="col-6">
                 :
