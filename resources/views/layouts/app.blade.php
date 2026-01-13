@@ -53,13 +53,8 @@
                                 aria-labelledby="userDropdown">
                                 <a class="dropdown-item" href="#">
                                     <div>
-                                        @if (Auth::user()->jenis_akun == 'Admin')
                                         <span class="badge badge-dark justify-content-center d-flex">
                                             {{ Auth::user()->jenis_akun }}
-                                    @else 
-                                        <span class="badge badge-info justify-content-center d-flex">
-                                            {{ Auth::user()->jenis_akun }}
-                                    @endif
                                     </div>
                                 </a>
                                 <a class="dropdown-item" href="#">
