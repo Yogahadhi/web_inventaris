@@ -48,6 +48,9 @@ Route::middleware('checkLogin')->group(function () {
     //UserDelete
     Route::delete('user/destroy/{id}',[UserController::class,'destroy'])->
     name('userDestroy');
+    //UserExcel
+    Route::get('user/excel',[UserController::class,'excel'])->
+    name('userExcel');
 
     //Laporan
     Route::get('laporan',[LaporanController::class,'index'])->

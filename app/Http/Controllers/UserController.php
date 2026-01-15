@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Exports\UsersExport;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Maatwebsite\Excel\Facades\Excel;
 
 class UserController extends Controller
 {
@@ -102,5 +104,11 @@ class UserController extends Controller
         $user->delete();
 
         return redirect()->route('user')->with('success','Data pengguna berhasil dihapus');
+    }
+
+    public function excel()
+    {
+        $filename = now()->format('d-m-Y_H.i.s');
+        return Excel::download(new UsersExport, 'DataUser_'.$filename.'.xlsx');
     }
 }
