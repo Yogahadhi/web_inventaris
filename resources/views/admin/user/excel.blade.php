@@ -1,19 +1,19 @@
 <table>
     <thead>
         <tr>
-            <th width="10">No</th>
-            <th width="20">Nama</th>
-            <th width="20">Jabatan</th>
-            <th width="20">Jenis Akun</th>
+            <th width="10" align="center">No</th>
+            <th width="20" align="center">Nama</th>
+            <th width="20" align="center">Jabatan</th>
+            <th width="20" align="center">Jenis Akun</th>
         </tr>
     </thead>
     <tbody>
         @foreach ($user as $item)
             <tr>
-                <td>{{ $loop->iteration }}</td>
+                <td align="center">{{ $loop->iteration }}</td>
                 <td>{{ $item->name }}</td>
                 <td>{{ $item->jabatan }}</td>
-                <td>{{ $item->jenis_akun }}</td>
+                <td align="center">{{ $item->jenis_akun }}</td>
             </tr>
         @endforeach
     </tbody>
