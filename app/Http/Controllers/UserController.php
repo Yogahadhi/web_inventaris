@@ -117,6 +117,8 @@ class UserController extends Controller
         $filename = now()->format('d-m-Y_H.i.s');
         $data = array(
             'user' => User::get(),
+            'tanggal'   => now()->format('d-m-Y'),
+            'jam'       => now()->format('H.i.s'),
         );
 
         $pdf = Pdf::loadView('admin.user.pdf', $data);

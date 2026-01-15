@@ -1,6 +1,15 @@
 <table>
     <thead>
         <tr>
+            <th colspan="4" align="center">Data User</th> 
+        </tr> 
+        <tr>
+            <th colspan="4" align="center">Dicetak pada tanggal: {{ $tanggal }}</th> 
+        </tr> 
+        <tr>
+            <th colspan="4" align="center">Pukul: {{ $jam }}</th> 
+        </tr> 
+        <tr>
             <th width="10" align="center">No</th>
             <th width="20" align="center">Nama</th>
             <th width="20" align="center">Jabatan</th>

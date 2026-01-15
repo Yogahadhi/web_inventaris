@@ -11,7 +11,9 @@ class UsersExport implements FromView
     public function view(): View
     {
         $data = array(
-            'user' => User::orderBy('jenis_akun','asc')->get(),
+            'user'      => User::orderBy('jenis_akun','asc')->get(),
+            'tanggal'   => now()->format('d-m-Y'),
+            'jam'       => now()->format('H.i.s'),
         );
         return view('admin.user.excel', $data);
     }

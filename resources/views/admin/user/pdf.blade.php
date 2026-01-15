@@ -1,4 +1,6 @@
-<h1 align="center">Data User</h1>
+<h3 align="center">Data User</h3>
+<h3 align="center">Dicetak pada tanggal: {{ $tanggal }}</h3>
+<h3 align="center">Pukul: {{ $jam }}</h3>
 <hr>
 <table width="100%" border='1px' style="border-collapse:collapse;">
     <thead>
