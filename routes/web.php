@@ -51,6 +51,9 @@ Route::middleware('checkLogin')->group(function () {
     //UserExcel
     Route::get('user/excel',[UserController::class,'excel'])->
     name('userExcel');
+    //UserPDF
+    Route::get('user/pdf',[UserController::class,'pdf'])->
+    name('userPdf');
 
     //Laporan
     Route::get('laporan',[LaporanController::class,'index'])->

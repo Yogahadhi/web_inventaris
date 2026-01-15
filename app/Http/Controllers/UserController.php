@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Exports\UsersExport;
 use Illuminate\Http\Request;
+use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Support\Facades\Hash;
 use Maatwebsite\Excel\Facades\Excel;
 
@@ -110,5 +111,15 @@ class UserController extends Controller
     {
         $filename = now()->format('d-m-Y_H.i.s');
         return Excel::download(new UsersExport, 'DataUser_'.$filename.'.xlsx');
+    }
+
+    public function pdf(){
+        $filename = now()->format('d-m-Y_H.i.s');
+        $data = array(
+            'user' => User::get(),
+        );
+
+        $pdf = Pdf::loadView('admin.user.pdf', $data);
+        return $pdf->setPaper('a4', 'landscape')->stream('DataUser_'.$filename.'.pdf');
     }
 }
