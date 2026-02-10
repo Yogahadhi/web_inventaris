@@ -21,9 +21,7 @@ return new class extends Migration
             $table->enum('kondisi', ['Layak_Pakai', 'Perlu_Perbaikan', 'Rusak']);
             $table->string('lokasi');
             $table->string('tanggal');
-            $table->foreignId('operator')
-                    ->constrained('user')
-                    ->onDelete('restrict');
+            $table->foreignId('name')->constrained('users')->onUpdate('cascade');
             $table->string('keterangan');
             $table->timestamps();
         });

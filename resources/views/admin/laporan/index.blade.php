@@ -10,12 +10,12 @@
 
     <div class="card">
         <div class="card-header d-flex flex-wrap justify-content-center justify-content-between">
-            {{--<div class="mb-1 mr-2">
+            <div class="mb-1 mr-2">
                 <a href="#" class="btn btn-primary btn-sm">
                     <i class="fas fa-plus mr-2"></i>
                     Tambah Data
                 </a>
-            </div>--}}
+            </div>
             <div>
                 <a href="#" class="btn btn-success btn-sm">
                     <i class="fas fa-file-excel mr-2"></i>
@@ -42,7 +42,7 @@
                             <th>Kondisi</th>
                             <th>Lokasi</th>
                             <th>Tanggal Pengecekan</th>
-                            <th>Operator</th>
+                            <th>Petugas</th>
                             <th>Keterangan</th>
                         </tr>
                     </thead>

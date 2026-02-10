@@ -72,7 +72,7 @@
             </div>
           </div>
           <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="100">
-            <img src="{{ asset('enno/assets/img/hero-img.png') }}" class="img-fluid animated" alt="">
+            <img src="{{ asset('enno/assets/img/hero-img.png') }}" class="img-fluid animated" alt="" style="width: 80%">
           </div>
         </div>
       </div>
@@ -165,7 +165,7 @@
               </div><!-- End Info Item -->
 
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d829.1552133715229!2d119.46001096950751!3d-5.1461279639775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dbee2d6ed555f7b%3A0x852636e309f86e37!2sBBPVP%20Makassar!5e1!3m2!1sid!2sid!4v1767598013935!5m2!1sid!2sid" 
-              frameborder="0" style="border:0; width: 100%; height: 400px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              frameborder="0" style="border:0; width: 90%; height: 250px; display:block; margin:0 auto" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
           </div>
         </div>
