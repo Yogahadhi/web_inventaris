@@ -15,13 +15,13 @@ return new class extends Migration
             $table->id();
             $table->string('id_perangkat');
             $table->string('nama');
-            $table->enum('kategori', ['Komputer', 'Mouse', 'Monitor', 'Keyboard']);
+            $table->enum('kategori', ['Komputer', 'Mouse', 'Monitor', 'Keyboard', 'Printer', 'Scanner', 'Speaker']);
             $table->string('merek');
             $table->string('model');
             $table->enum('kondisi', ['Layak_Pakai', 'Perlu_Perbaikan', 'Rusak']);
             $table->string('lokasi');
-            $table->string('tanggal');
-            $table->foreignId('name')->constrained('users')->onUpdate('cascade');
+            $table->date('tanggal');
+            $table->foreignId('created_by')->constrained('users')->onUpdate('cascade');
             $table->string('keterangan');
             $table->timestamps();
         });

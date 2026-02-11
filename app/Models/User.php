@@ -24,6 +24,10 @@ class User extends Authenticatable
         'password',
     ];
 
+    public function laporan(){
+        return $this->hasMany(Laporan::class);
+    }
+
     /**
      * The attributes that should be hidden for serialization.
      *
