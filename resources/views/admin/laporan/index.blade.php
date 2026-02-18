@@ -4,14 +4,14 @@
 
     <!-- Page Heading -->
     <h1 class="h3 mb-4 text-gray-800">
-        <i class="fas fa-users mr-2"></i>
+        <i class="fas fa-clipboard-list mr-2"></i>
         {{ $title }}
     </h1>
 
     <div class="card">
         <div class="card-header d-flex flex-wrap justify-content-center justify-content-between">
             <div class="mb-1 mr-2">
-                <a href="{{ route('userCreate') }}" class="btn btn-primary btn-sm">
+                <a href="{{ route('laporanCreate') }}" class="btn btn-primary btn-sm">
                     <i class="fas fa-plus mr-2"></i>
                     Tambah Data
                 </a>
@@ -64,7 +64,7 @@
                                 <td>{{ $item->kondisi }}</td>
                                 <td>{{ $item->lokasi }}</td>
                                 <td class="text-center">
-                                    <span class="badge badge-info">
+                                    <span class="badge badge-primary">
                                         {{ $item->tanggal }}</span>
                                 </td>
                                 <td>
