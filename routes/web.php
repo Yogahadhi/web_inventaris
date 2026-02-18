@@ -64,6 +64,9 @@ Route::middleware('checkLogin')->group(function () {
     //LaporanStore
     Route::post('laporan/store',[LaporanController::class,'store'])->
     name('laporanStore');
+    //LaporanUpdate
+    Route::get('laporan/update/{id}',[LaporanController::class,'edit'])->
+    name('laporanEdit');
 
     //Data Komputer
     Route::get('komputer',[DataKomputer::class,'index'])->

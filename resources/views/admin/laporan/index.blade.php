@@ -79,7 +79,7 @@
                                 <td>{{ $item->keterangan }}</td>
 
                                 <td class="text-center">
-                                    <a href="{{ route('userEdit', $item->id) }}" 
+                                    <a href="{{ route('laporanEdit', $item->id) }}" 
                                         class="btn btn-warning btn-sm">
                                         <i class="fas fa-edit"></i>
                                     </a>

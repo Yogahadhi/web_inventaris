@@ -70,4 +70,14 @@ class LaporanController extends Controller
 
         return redirect()->route('laporan')->with('success','Data laporan invetaris berhasil ditambahkan');
     }
+
+    public function edit($id)
+    {
+        $data = array(
+            'title'         => 'Edit Data Laporan',
+            'menuAdminLaporan' => 'active',
+            'laporan'          => Laporan::findOrFail($id),
+        );
+        return view('admin.laporan.update',$data);
+    }
 }
