@@ -76,8 +76,52 @@ class LaporanController extends Controller
         $data = array(
             'title'         => 'Edit Data Laporan',
             'menuAdminLaporan' => 'active',
-            'laporan'          => Laporan::findOrFail($id),
+            'user'          => User::get(),
+            'laporan'          => Laporan::with('user')->findOrFail($id),
         );
         return view('admin.laporan.update',$data);
+    }
+
+        public function update(Request $request, $id)
+    {
+        $request->validate([
+            'id_perangkat' => 'required',
+            'nama' => 'required',
+            'kategori' => 'required',
+            'merek' => 'required',
+            'model' => 'required',
+            'kondisi' => 'required',
+            'lokasi' => 'required',
+            'tanggal' => 'required',
+            'created_by' => 'required',
+            'keterangan' => 'nullable',
+
+        ],[
+            'id_perangkat.required' => 'ID Perangkat tidak boleh kosong',
+            'nama.required' => 'Nama tidak boleh kosong',
+            'kategori.required' => 'Kategori tidak boleh kosong',
+            'merek.required' => 'Merek tidak boleh kosong',
+            'model.required' => 'Model tidak boleh kosong',
+            'kondisi.required' => 'Kondisi tidak boleh kosong',
+            'lokasi.required' => 'Lokasi tidak boleh kosong',
+            'tanggal.required' => 'Tanggal tidak boleh kosong',
+            'created_by.required' => 'Petugas tidak boleh kosong',
+         ]);
+
+        $laporan = Laporan::findOrFail($id);
+        $laporan->id_perangkat = $request->id_perangkat;
+        $laporan->nama = $request->nama;
+        $laporan->kategori = $request->kategori;
+        $laporan->merek = $request->merek;
+        $laporan->model = $request->model;
+        $laporan->kondisi = $request->kondisi;
+        $laporan->lokasi = $request->lokasi;
+        $laporan->tanggal = $request->tanggal;
+        $laporan->created_by = $request->created_by;
+        $laporan->keterangan = $request->keterangan;
+
+        $laporan->save();
+        
+        return redirect()->route('laporan')->with('success','Data laporan invetaris berhasil diubah');
     }
 }

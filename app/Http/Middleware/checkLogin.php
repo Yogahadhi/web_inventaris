@@ -18,7 +18,7 @@ class checkLogin
     {
         if (Auth::check()){
             return $next($request);
-    } else{
+    }   else{
             return redirect()->route('login')->with('error', 'Anda harus login terlebih dahulu');
         }
     }
