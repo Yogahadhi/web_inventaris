@@ -124,4 +124,11 @@ class LaporanController extends Controller
         
         return redirect()->route('laporan')->with('success','Data laporan invetaris berhasil diubah');
     }
+
+    public function destroy($id){
+        $laporan = Laporan::findOrFail($id);
+        $laporan->delete();
+
+        return redirect()->route('laporan')->with('success','Data laporan berhasil dihapus');
+    }
 }

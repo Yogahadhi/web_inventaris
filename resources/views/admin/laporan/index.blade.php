@@ -61,7 +61,18 @@
                                 </td>
                                 <td>{{ $item->merek }}</td>
                                 <td>{{ $item->model }}</td>
-                                <td>{{ $item->kondisi }}</td>
+                                <td>
+                                    @if ($item->kondisi == 'Layak_Pakai')
+                                        <span class="badge badge-success">
+                                            {{ $item->kondisi }}
+                                    @elseif ($item->kondisi == 'Perlu_Perbaikan') 
+                                        <span class="badge badge-warning">
+                                            {{ $item->kondisi }}
+                                    @else
+                                        <span class="badge badge-danger">
+                                            {{ $item->kondisi }}
+                                    @endif
+                                </td>
                                 <td>{{ $item->lokasi }}</td>
                                 <td class="text-center">
                                     <span class="badge badge-primary">
@@ -83,10 +94,10 @@
                                         class="btn btn-warning btn-sm">
                                         <i class="fas fa-edit"></i>
                                     </a>
-                                    <button class="btn btn-sm btn-danger" data-toggle="modal" data-target="#exampleModal{{ $item->id }}">
+                                    <button class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modalLaporanDestroy{{ $item->id }}">
                                         <i class="fas fa-trash-alt"></i>
                                     </button>
-                                    @include('admin.user.modal')
+                                    @include('admin.laporan.modal')
                                 </td>
                             </tr>
                         @endforeach
