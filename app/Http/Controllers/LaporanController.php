@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\LaporanExport;
 use App\Models\Laporan;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
 
 class LaporanController extends Controller
 {
@@ -131,4 +133,10 @@ class LaporanController extends Controller
 
         return redirect()->route('laporan')->with('success','Data laporan berhasil dihapus');
     }
+    public function excel()
+    {
+        $filename = now()->format('d-m-Y_H.i.s');
+        return Excel::download(new LaporanExport, 'DataLaporan_'.$filename.'.xlsx');
+    }
+
 }

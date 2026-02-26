@@ -69,8 +69,12 @@ Route::middleware('checkLogin')->group(function () {
     name('laporanEdit');
     Route::post('laporan/update/{id}',[LaporanController::class,'update'])->
     name('laporanUpdate');
+    //LaporanDelete
     Route::delete('laporan/destroy/{id}',[LaporanController::class,'destroy'])->
     name('laporanDestroy');
+    //LaporanExcel
+    Route::get('laporan/excel',[LaporanController::class,'excel'])->
+    name('laporanExcel');
 
     //Data Komputer
     Route::get('komputer',[DataKomputer::class,'index'])->

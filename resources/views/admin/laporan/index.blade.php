@@ -17,7 +17,7 @@
                 </a>
             </div>
             <div>
-                <a href="{{ route('userExcel') }}" class="btn btn-success btn-sm">
+                <a href="{{ route('laporanExcel') }}" class="btn btn-success btn-sm">
                     <i class="fas fa-file-excel mr-2"></i>
                     Excel
                 </a>
