@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Exports\LaporanExport;
 use App\Models\Laporan;
 use App\Models\User;
+use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
 
@@ -133,10 +134,23 @@ class LaporanController extends Controller
 
         return redirect()->route('laporan')->with('success','Data laporan berhasil dihapus');
     }
+    
     public function excel()
     {
         $filename = now()->format('d-m-Y_H.i.s');
         return Excel::download(new LaporanExport, 'DataLaporan_'.$filename.'.xlsx');
+    }
+
+    public function pdf(){
+        $filename = now()->format('d-m-Y_H.i.s');
+        $data = array(
+            'laporan' => Laporan::get(),
+            'tanggal'   => now()->format('d-m-Y'),
+            'jam'       => now()->format('H.i.s'),
+        );
+
+        $pdf = Pdf::loadView('admin.laporan.pdf', $data);
+        return $pdf->setPaper('a4', 'landscape')->stream('DataLaporan_'.$filename.'.pdf');
     }
 
 }

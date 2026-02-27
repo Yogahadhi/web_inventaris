@@ -62,10 +62,6 @@
                                         @endif
                                     </div>
                                 </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-cog fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Pengaturan
-                                </a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="{{ route('logout') }}">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>

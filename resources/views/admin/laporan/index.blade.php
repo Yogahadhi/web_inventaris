@@ -22,7 +22,7 @@
                     Excel
                 </a>
 
-                <a href="{{ route('userPdf') }}" class="btn btn-danger btn-sm" target='__blank'>
+                <a href="{{ route('laporanPdf') }}" class="btn btn-danger btn-sm" target='__blank'>
                     <i class="fas fa-file-pdf mr-2"></i>
                     PDF
                 </a>
