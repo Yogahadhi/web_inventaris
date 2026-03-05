@@ -32,11 +32,11 @@
             </div>
             <div class="col-6">
                 : 
-                @if($item->kondisi == 'Layak_Pakai')
+                @if($item->kondisi == 'Layak Pakai')
                      <span class="badge badge-success">
                         {{ $item->kondisi }}
                     </span>
-                @elseif($item->kondisi == 'Perlu_Perbaikan')
+                @elseif($item->kondisi == 'Perlu Perbaikan')
                      <span class="badge badge-warning">
                         {{ $item->kondisi }}
                     </span>

@@ -28,6 +28,10 @@ class User extends Authenticatable
         return $this->hasMany(Laporan::class);
     }
 
+    public function komputer(){
+        return $this->hasMany(Komputer::class);
+    }
+    
     /**
      * The attributes that should be hidden for serialization.
      *

@@ -54,10 +54,10 @@
                                 <td class="text-center">
                                     @if ($item->jenis_akun == 'Admin')
                                         <span class="badge badge-dark">
-                                            {{ $item->jenis_akun }}
+                                            {{ $item->jenis_akun }}</span>
                                     @else 
                                         <span class="badge badge-info">
-                                            {{ $item->jenis_akun }}
+                                            {{ $item->jenis_akun }}</span>
                                     @endif
                                 </td>
                                 <td class="text-center">

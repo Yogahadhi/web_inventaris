@@ -62,15 +62,15 @@
                                 <td>{{ $item->merek }}</td>
                                 <td>{{ $item->model }}</td>
                                 <td>
-                                    @if ($item->kondisi == 'Layak_Pakai')
+                                    @if ($item->kondisi == 'Layak Pakai')
                                         <span class="badge badge-success">
-                                            {{ $item->kondisi }}
-                                    @elseif ($item->kondisi == 'Perlu_Perbaikan') 
+                                            {{ $item->kondisi }}</span>
+                                    @elseif ($item->kondisi == 'Perlu Perbaikan') 
                                         <span class="badge badge-warning">
-                                            {{ $item->kondisi }}
+                                            {{ $item->kondisi }}</span>
                                     @else
                                         <span class="badge badge-danger">
-                                            {{ $item->kondisi }}
+                                            {{ $item->kondisi }}</span>
                                     @endif
                                 </td>
                                 <td>{{ $item->lokasi }}</td>
@@ -81,10 +81,10 @@
                                 <td>
                                     @if ($item->user->jenis_akun == 'Admin')
                                         <span class="badge badge-dark">
-                                            {{ $item->user->name }} - {{ $item->user->jenis_akun }}
+                                            {{ $item->user->name }} - {{ $item->user->jenis_akun }}</span>
                                     @else 
                                         <span class="badge badge-info">
-                                            {{ $item->user->name }} - {{ $item->user->jenis_akun }}
+                                            {{ $item->user->name }} - {{ $item->user->jenis_akun }}</span>
                                     @endif
                                 </td>
                                 <td>{{ $item->keterangan }}</td>

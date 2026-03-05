@@ -91,8 +91,8 @@
                         </label>
                         <select name="kondisi" class="form-control @error('kondisi') is-invalid @enderror">
                             <option selected disabled>--Pilih Kondisi--</option>
-                            <option value="Layak_Pakai" {{ $laporan->kondisi == 'Layak_Pakai' ? 'selected' : ''}}>Layak Pakai</option>
-                            <option value="Perlu_Perbaikan" {{ $laporan->kondisi == 'Perlu_Perbaikan' ? 'selected' : ''}}>Perlu Perbaikan</option>
+                            <option value="Layak Pakai" {{ $laporan->kondisi == 'Layak Pakai' ? 'selected' : ''}}>Layak Pakai</option>
+                            <option value="Perlu Perbaikan" {{ $laporan->kondisi == 'Perlu Perbaikan' ? 'selected' : ''}}>Perlu Perbaikan</option>
                             <option value="Rusak" {{ $laporan->kondisi == 'Rusak' ? 'selected' : ''}}>Rusak</option>
                         </select>
                         @error('kondisi')

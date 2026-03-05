@@ -91,8 +91,8 @@
                         </label>
                         <select name="kondisi" class="form-control @error('kondisi') is-invalid @enderror">
                             <option selected disabled>--Pilih Kondisi--</option>
-                            <option value="Layak_Pakai">Layak Pakai</option>
-                            <option value="Perlu_Perbaikan">Perlu Perbaikan</option>
+                            <option value="Layak Pakai">Layak Pakai</option>
+                            <option value="Perlu Perbaikan">Perlu Perbaikan</option>
                             <option value="Rusak">Rusak</option>
                         </select>
                         @error('kondisi')

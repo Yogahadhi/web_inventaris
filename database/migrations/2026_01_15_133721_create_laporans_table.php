@@ -18,11 +18,11 @@ return new class extends Migration
             $table->enum('kategori', ['Komputer', 'Mouse', 'Monitor', 'Keyboard', 'Printer', 'Scanner', 'Speaker']);
             $table->string('merek');
             $table->string('model');
-            $table->enum('kondisi', ['Layak_Pakai', 'Perlu_Perbaikan', 'Rusak']);
+            $table->enum('kondisi', ['Layak Pakai', 'Perlu Perbaikan', 'Rusak']);
             $table->string('lokasi');
             $table->date('tanggal');
             $table->foreignId('created_by')->constrained('users')->onUpdate('cascade');
-            $table->string('keterangan');
+            $table->string('keterangan')->nullable();
             $table->timestamps();
         });
     }

@@ -35,7 +35,7 @@
                         <tr class ="text-center">
                             <th>No</th>
                             <th>ID Perangkat</th>
-                            <th>Lokasi</th>
+                            <th>Nama Perangkat</th>
                             <th>Merek</th>
                             <th>Model</th>
                             <th>CPU</th>
@@ -51,39 +51,76 @@
                             <th>Kondisi</th>
                             <th>Status Teknis</th>
                             <th>Tanggal Pengecekan</th>
-                            <th>Operator</th>
+                            <th>Petugas</th>
                             <th>Keterangan</th>
                             <th>Fungsi Print</th>
                             <th>Kemampuan Desain</th>
+                            <th>
+                                <i class="fas fa-cog"></i>
+                            </th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th class="text-center">1</th>
-                            <td>PC-25-004</td>
-                            <td>Komputer Ruang Perakitan</td>
-                            <td>HP</td>
-                            <td>PC Build Up</td>
-                            <td>Intel Core i5-2500S</td>
-                            <td>4 GB</td>
-                            <td>DDR 4</td>
-                            <td>500 gb</td>
-                            <td>HDD</td>
-                            <td>ATI ATOMBIOS HD5450</td>
-                            <td>Wifi dan LAN</td>
-                            <td>Asus H110M-E</td>
-                            <td>Simbadda SB-380W</td>
-                            <td>Windows 10</td>
-                            <td class="text-center">
-                                <span class="badge badge-warning badge-pill">Perlu Perbaikan
-                                </span></td>
-                            <td>HDD Error</td>
-                            <td>16/12/2025</td>
-                            <td>Fajar</td>
-                            <td>HDD tidak terbaca dan perlu instalasi MS Office</td>
-                            <td>Tidak bisa</td>
-                            <td>Tidak bisa</td>
-                        </tr>          
+                        @foreach ($komputer as $item)
+                            <tr>
+                                <td class="text-center">{{ $loop->iteration }}</td>
+                                <td>{{ $item->laporan->id_perangkat }}</td>
+                                <td>{{ $item->laporan->nama }}</td>
+                                <td>{{ $item->laporan->merek }}</td>
+                                <td>{{ $item->laporan->model }}</td>
+                                <td>{{ $item->cpu }}</td>
+                                <td>{{ $item->kapasitas_ram }}</td>
+                                <td>{{ $item->jenis_ram }}</td>
+                                <td>{{ $item->kapasitas_storage }}</td>s
+                                <td>{{ $item->jenis_storage }}</td>
+                                <td>{{ $item->vga }}</td>
+                                <td>{{ $item->jaringan }}</td>
+                                <td>{{ $item->motherboard }}</td>
+                                <td>{{ $item->psu }}</td>
+                                <td>{{ $item->sistem_operasi }}</td>
+                                <td>
+                                    @if ($item->kondisi == 'Layak Pakai')
+                                        <span class="badge badge-success">
+                                            {{ $item->kondisi }}
+                                    @elseif ($item->kondisi == 'Perlu Perbaikan') 
+                                        <span class="badge badge-warning">
+                                            {{ $item->kondisi }}
+                                    @else
+                                        <span class="badge badge-danger">
+                                            {{ $item->kondisi }}
+                                        </span>
+                                    @endif
+                                </td>
+                                <td>{{ $item->status_teknis }}</td>
+                                <td class="text-center">
+                                    <span class="badge badge-primary">
+                                        {{ $item->tanggal }}</span>
+                                </td>
+                                <td>
+                                    @if ($item->user->jenis_akun == 'Admin')
+                                        <span class="badge badge-dark">
+                                            {{ $item->user->name }} - {{ $item->user->jenis_akun }}</span>
+                                    @else 
+                                        <span class="badge badge-info">
+                                            {{ $item->user->name }} - {{ $item->user->jenis_akun }}</span>
+                                    @endif
+                                </td>
+                                <td>{{ $item->keterangan }}</td>
+                                <td>{{ $item->fungsi_print }}</td>
+                                <td>{{ $item->desain }}</td>
+
+                                <td class="text-center">
+                                    <a href="{{ route('laporanEdit', $item->id) }}" 
+                                        class="btn btn-warning btn-sm">
+                                        <i class="fas fa-edit"></i>
+                                    </a>
+                                    <button class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modalLaporanDestroy{{ $item->id }}">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </button>
+                                    @include('admin.laporan.modal')
+                                </td>                               
+                            </tr>
+                        @endforeach      
                     </tbody>
                 </table>
             </div>

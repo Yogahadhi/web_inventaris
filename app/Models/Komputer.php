@@ -4,13 +4,13 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Laporan extends Model
+class Komputer extends Model
 {
-    public function komputer(){
-        return $this->hasOne(Komputer::class);
-    } 
-      
     public function user(){
         return $this->belongsTo(User::class, 'created_by');
+    }
+
+    public function laporan(){
+        return $this->belongsTo(Laporan::class, 'id_perangkat');
     }
 }
