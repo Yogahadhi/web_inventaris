@@ -14,7 +14,7 @@ class AuthController extends Controller
     public function loginProses(Request $request)
     {
         $request->validate([
-            'name' => 'required'.'|min:3|max:100',
+            'name' => 'required|min:3|max:100',
             'password' => 'required|min:6|max:50',
         ],[
             'name.required' => 'Nama tidak boleh kosong',

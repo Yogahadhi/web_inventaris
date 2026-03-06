@@ -11,7 +11,7 @@
     <div class="card">
         <div class="card-header d-flex flex-wrap justify-content-center justify-content-between">
             <div class="mb-1 mr-2">
-                <a href="#" class="btn btn-primary btn-sm">
+                <a href="{{ route('komputerCreate') }}" class="btn btn-primary btn-sm">
                     <i class="fas fa-plus mr-2"></i>
                     Tambah Data
                 </a>
@@ -71,7 +71,7 @@
                                 <td>{{ $item->cpu }}</td>
                                 <td>{{ $item->kapasitas_ram }}</td>
                                 <td>{{ $item->jenis_ram }}</td>
-                                <td>{{ $item->kapasitas_storage }}</td>s
+                                <td>{{ $item->kapasitas_storage }}</td>
                                 <td>{{ $item->jenis_storage }}</td>
                                 <td>{{ $item->vga }}</td>
                                 <td>{{ $item->jaringan }}</td>

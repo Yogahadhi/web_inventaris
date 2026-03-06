@@ -34,7 +34,7 @@ class LaporanController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'id_perangkat' => 'required',
+            'id_perangkat' => 'required|unique:laporans,id_perangkat',
             'nama' => 'required',
             'kategori' => 'required',
             'merek' => 'required',
@@ -46,7 +46,8 @@ class LaporanController extends Controller
             'keterangan' => 'nullable',
 
         ],[
-            'id_perangkat.required' => 'ID Perangkat tidak boleh kosong',
+            'id_perangkat.required' => 'ID perangkat tidak boleh kosong',
+            'id_perangkat.unique' => 'ID perangkat sudah digunakan, silahkan gunakan kode ID yang lain',
             'nama.required' => 'Nama tidak boleh kosong',
             'kategori.required' => 'Kategori tidak boleh kosong',
             'merek.required' => 'Merek tidak boleh kosong',
