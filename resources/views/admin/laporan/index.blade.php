@@ -56,8 +56,28 @@
                                 <td>{{ $item->id_perangkat }}</td>
                                 <td>{{ $item->nama }}</td>
                                 <td class="text-center">
-                                    <span class="badge badge-primary">
-                                        {{ $item->kategori }}</span>
+                                    @if ($item->kategori == 'Komputer')
+                                        <span class="badge badge-primary">
+                                            {{ $item->kategori }}</span>
+                                    @elseif ($item->kategori == 'Mouse')
+                                        <span class="badge badge-secondary">
+                                            {{ $item->kategori }}</span>
+                                    @elseif ($item->kategori == 'Monitor')
+                                        <span class="badge badge-info">
+                                            {{ $item->kategori }}</span>
+                                    @elseif ($item->kategori == 'Keyboard')
+                                        <span class="badge badge-warning">
+                                            {{ $item->kategori }}</span>
+                                    @elseif ($item->kategori == 'Printer')
+                                        <span class="badge badge-danger">
+                                            {{ $item->kategori }}</span>
+                                    @elseif ($item->kategori == 'Scanner')
+                                        <span class="badge badge-success">
+                                            {{ $item->kategori }}</span>
+                                    @else
+                                        <span class="badge badge-dark">
+                                            {{ $item->kategori }}</span>
+                                    @endif
                                 </td>
                                 <td>{{ $item->merek }}</td>
                                 <td>{{ $item->model }}</td>

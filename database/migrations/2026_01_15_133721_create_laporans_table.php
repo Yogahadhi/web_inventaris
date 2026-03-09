@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('laporans', function (Blueprint $table) {
             $table->id();
-            $table->string('id_perangkat');
+            $table->string('id_perangkat')->unique();
             $table->string('nama');
             $table->enum('kategori', ['Komputer', 'Mouse', 'Monitor', 'Keyboard', 'Printer', 'Scanner', 'Speaker']);
             $table->string('merek');
