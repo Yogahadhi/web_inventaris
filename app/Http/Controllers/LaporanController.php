@@ -89,7 +89,7 @@ class LaporanController extends Controller
         public function update(Request $request, $id)
     {
         $request->validate([
-            'id_perangkat' => 'required',
+            'id_perangkat' => 'required|unique:laporans,id_perangkat,' . $id,
             'nama' => 'required',
             'kategori' => 'required',
             'merek' => 'required',
@@ -102,6 +102,7 @@ class LaporanController extends Controller
 
         ],[
             'id_perangkat.required' => 'ID Perangkat tidak boleh kosong',
+            'id_perangkat.unique' => 'ID Perangkat telah digunakan',
             'nama.required' => 'Nama tidak boleh kosong',
             'kategori.required' => 'Kategori tidak boleh kosong',
             'merek.required' => 'Merek tidak boleh kosong',

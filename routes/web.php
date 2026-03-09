@@ -88,6 +88,12 @@ Route::middleware('checkLogin')->group(function () {
     //KomputerStore
     Route::post('komputer/store',[DataKomputer::class,'store'])->
     name('komputerStore');
+    //KomputerEdit
+    Route::get('komputer/edit/{id}',[DataKomputer::class,'edit'])->
+    name('komputerEdit');
+    //KomputerUpdate
+    Route::post('komputer/update/{id}',[DataKomputer::class,'update'])->
+    name('komputerUpdate');
 
     //Stock Opname
     Route::get('stock-opname',[StockOpname::class,'index'])->

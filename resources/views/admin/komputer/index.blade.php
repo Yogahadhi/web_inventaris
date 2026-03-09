@@ -30,7 +30,7 @@
         </div>
         <div class="card-body">
             <div class="table-responsive">
-                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <table class="table table-bordered table-hover" id="dataTable" width="100%" cellspacing="0">
                     <thead class="bg-primary text-white">
                         <tr class ="text-center">
                             <th>No</th>
@@ -110,7 +110,7 @@
                                 <td>{{ $item->desain }}</td>
 
                                 <td class="text-center">
-                                    <a href="{{ route('laporanEdit', $item->id) }}" 
+                                    <a href="{{ route('komputerEdit', $item->id) }}" 
                                         class="btn btn-warning btn-sm">
                                         <i class="fas fa-edit"></i>
                                     </a>

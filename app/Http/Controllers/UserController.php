@@ -73,19 +73,18 @@ class UserController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'name' => 'required|min:3|max:100',
+            'name' => 'required|min:3|max:100|unique:users,name,' . $id,
             'jabatan' => 'required',
             'jenis_akun' => 'required',
             'password' => 'nullable|min:6|max:50|confirmed',
         ],[
+            'name.unique' => 'Nama ini telah digunakan',
             'name.required' => 'Nama tidak boleh kosong',
             'jabatan.required' => 'Jabatan tidak boleh kosong',
             'jenis_akun.required' => 'Jenis akun harus dipilih',
             'password.min' => 'Password minimal 6 karakter',
             'password.max' => 'Password maksimal 50 karakter',
             'password.confirmed' => 'Konfirmasi password tidak sesuai',
-            'name.min' => 'Nama minimal 3 karakter',
-            'name.max' => 'Nama maksimal 100 karakter',
          ]);
 
          $user = User::findOrFail($id);
