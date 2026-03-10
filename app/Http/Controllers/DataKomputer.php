@@ -105,7 +105,7 @@ class DataKomputer extends Controller
         $data = array(
             'title'            => 'Edit Data Komputer',
             'menuDataKomputer' => 'active',
-            'laporan'          => Laporan::where('kategori', 'Komputer')->get(),
+            'laporan'          => Laporan::where('kategori', 'Komputer')->whereNotIn('id', Komputer::where('id','!=',$id)->pluck('id_perangkat'))->get(),
             'user'             => User::get(),
             'komputer'         => Komputer::with('user','laporan')->findOrFail($id),
         );
