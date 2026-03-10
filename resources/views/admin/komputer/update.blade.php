@@ -49,7 +49,7 @@
                             @foreach ($laporan as $item)
                                 <option value="{{ $item->id }}"
                                     {{ old('nama', $komputer->nama) == $item->id ? 'selected' : '' }}>
-                                    {{ $item->nama }}
+                                    {{ $item->id_perangkat }} - {{ $item->nama }}
                                 </option>
                             @endforeach
                         </select>
@@ -69,7 +69,7 @@
                             @foreach ($laporan as $item)
                                 <option value="{{ $item->id }}"
                                     {{ old('merek', $komputer->merek) == $item->id ? 'selected' : '' }}>
-                                    {{ $item->merek }}
+                                    {{ $item->id_perangkat }} - {{ $item->merek }}
                                 </option>
                             @endforeach
                         </select>
@@ -87,7 +87,7 @@
                             @foreach ($laporan as $item)
                                 <option value="{{ $item->id }}"
                                     {{ old('model', $komputer->model) == $item->id ? 'selected' : '' }}>
-                                    {{ $item->model }}
+                                    {{ $item->id_perangkat }} - {{ $item->model }}
                                 </option>
                             @endforeach
                         </select>

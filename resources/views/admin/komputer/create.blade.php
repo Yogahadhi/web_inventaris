@@ -44,7 +44,7 @@
                         <select name="nama" class="form-control @error('nama') is-invalid @enderror">
                             <option selected disabled>--Pilih Nama Perangkat Komputer--</option>
                             @foreach ($laporan as $item)
-                                <option value="{{ $item->id }}">{{ $item->nama }}</option>
+                                <option value="{{ $item->id }}">{{ $item->id_perangkat }} - {{ $item->nama }}</option>
                             @endforeach
                         </select>
                         @error('nama')
@@ -61,7 +61,7 @@
                         <select name="merek" class="form-control @error('merek') is-invalid @enderror">
                             <option selected disabled>--Pilih Merek Perangkat Komputer--</option>
                             @foreach ($laporan as $item)
-                                <option value="{{ $item->id }}">{{ $item->merek }}</option>
+                                <option value="{{ $item->id }}">{{ $item->id_perangkat }} - {{ $item->merek }}</option>
                             @endforeach
                         </select>
                         @error('merek')
@@ -76,7 +76,7 @@
                         <select name="model" class="form-control @error('model') is-invalid @enderror">
                             <option selected disabled>--Pilih Model Perangkat Komputer--</option>
                             @foreach ($laporan as $item)
-                                <option value="{{ $item->id }}">{{ $item->model }}</option>
+                                <option value="{{ $item->id }}">{{ $item->id_perangkat }} - {{ $item->model }}</option>
                             @endforeach
                         </select>
                         @error('model')

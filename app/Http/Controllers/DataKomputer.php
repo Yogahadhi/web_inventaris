@@ -24,7 +24,7 @@ class DataKomputer extends Controller
         $data = array(
             'title'            => 'Tambah Data Komputer',
             'menuDataKomputer' => 'active',
-            'laporan'          => Laporan::where('kategori', 'Komputer')->get(),
+            'laporan'          => Laporan::where('kategori', 'Komputer')->whereNotIn('id', Komputer::pluck('id_perangkat'))->get(),
             'user'             => User::get(),
         );
         return view('admin.komputer.create',$data);
