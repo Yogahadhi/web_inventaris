@@ -94,6 +94,9 @@ Route::middleware('checkLogin')->group(function () {
     //KomputerUpdate
     Route::post('komputer/update/{id}',[DataKomputer::class,'update'])->
     name('komputerUpdate');
+    //KomputerDelete
+    Route::delete('komputer/destroy/{id}',[DataKomputer::class,'destroy'])->
+    name('komputerDestroy');
 
     //Stock Opname
     Route::get('stock-opname',[StockOpname::class,'index'])->

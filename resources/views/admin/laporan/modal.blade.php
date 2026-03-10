@@ -32,6 +32,36 @@
             </div>
             <div class="col-6">
                 : 
+                @if ($item->kategori == 'Komputer')
+                    <span class="badge badge-primary">
+                        {{ $item->kategori }}</span>
+                @elseif ($item->kategori == 'Mouse')
+                    <span class="badge badge-secondary">
+                        {{ $item->kategori }}</span>
+                @elseif ($item->kategori == 'Monitor')
+                    <span class="badge badge-info">
+                        {{ $item->kategori }}</span>
+                @elseif ($item->kategori == 'Keyboard')
+                    <span class="badge badge-warning">
+                        {{ $item->kategori }}</span>
+                @elseif ($item->kategori == 'Printer')
+                    <span class="badge badge-danger">
+                        {{ $item->kategori }}</span>
+                @elseif ($item->kategori == 'Scanner')
+                    <span class="badge badge-success">
+                        {{ $item->kategori }}</span>
+                @else
+                    <span class="badge badge-dark">
+                        {{ $item->kategori }}</span>
+                @endif
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                Kondisi
+            </div>
+            <div class="col-6">
+                : 
                 @if($item->kondisi == 'Layak Pakai')
                      <span class="badge badge-success">
                         {{ $item->kondisi }}

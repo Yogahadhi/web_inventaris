@@ -1,5 +1,5 @@
 <!-- Modal Delete -->
-<div class="modal fade" id="modalLaporanDestroy{{$item->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="modalKomputerDestroy{{$item->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header bg-danger text-white">
@@ -14,7 +14,7 @@
                 Id Perangkat
             </div>
             <div class="col-6">
-                : <span class="badge badge-success">{{ $item->id_perangkat }}</span>
+                : <span class="badge badge-success">{{ $item->laporan->id_perangkat }}</span>
             </div>
         </div>
         <div class="row">
@@ -23,12 +23,30 @@
             </div>
             <div class="col-6">
                 : 
-                <span class="badge badge-primary">{{ $item->nama }}</span>
+                <span class="badge badge-primary">{{ $item->laporan->nama }}</span>
             </div>
         </div>
         <div class="row">
             <div class="col-6">
-                Kategori
+                Merek
+            </div>
+            <div class="col-6">
+                : 
+                <span class="badge badge-primary">{{ $item->laporan->merek }}</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                Model
+            </div>
+            <div class="col-6">
+                : 
+                <span class="badge badge-primary">{{ $item->laporan->model }}</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                Kondisi
             </div>
             <div class="col-6">
                 : 
@@ -49,15 +67,6 @@
         </div>
         <div class="row">
             <div class="col-6">
-                Lokasi
-            </div>
-            <div class="col-6">
-                : 
-                <span class="badge badge-primary">{{ $item->lokasi }}</span>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-6">
                 Tanggal Penginputan
             </div>
             <div class="col-6">
@@ -71,7 +80,7 @@
         <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">
             <i class="fas fa-times"></i>
             Tutup</button>
-        <form action="{{ route('laporanDestroy',$item->id) }}" method="post">
+        <form action="{{ route('komputerDestroy',$item->id) }}" method="post">
             @csrf
             @method('delete')
             <button type="submit" class="btn btn-sm btn-danger">

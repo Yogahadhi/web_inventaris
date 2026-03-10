@@ -114,10 +114,10 @@
                                         class="btn btn-warning btn-sm">
                                         <i class="fas fa-edit"></i>
                                     </a>
-                                    <button class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modalLaporanDestroy{{ $item->id }}">
+                                    <button class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modalKomputerDestroy{{ $item->id }}">
                                         <i class="fas fa-trash-alt"></i>
                                     </button>
-                                    @include('admin.laporan.modal')
+                                    @include('admin.komputer.modal')
                                 </td>                               
                             </tr>
                         @endforeach      

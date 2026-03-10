@@ -181,5 +181,12 @@ class DataKomputer extends Controller
 
         return redirect()->route('komputer')->with('success','Data spesifikasi komputer berhasil diubah');
     }
+
+    public function destroy($id){
+        $komputer = Komputer::findOrFail($id);
+        $komputer->delete();
+
+        return redirect()->route('komputer')->with('success','Data komputer berhasil dihapus');
+    }
     
 }
