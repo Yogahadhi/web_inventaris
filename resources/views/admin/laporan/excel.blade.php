@@ -1,7 +1,7 @@
 <table>
     <thead>
         <tr>
-            <th colspan="13" align="center">Data Laporan Inventaris</th> 
+            <th colspan="13" align="center">Laporan Data Inventaris</th> 
         </tr> 
         <tr>
             <th colspan="13" align="center">Dicetak pada tanggal: {{ $tanggal }}</th> 

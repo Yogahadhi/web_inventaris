@@ -6,6 +6,7 @@ use App\Exports\KomputerExport;
 use App\Models\Komputer;
 use App\Models\Laporan;
 use App\Models\User;
+use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
 
@@ -195,6 +196,18 @@ class DataKomputer extends Controller
     {
         $filename = now()->format('d-m-Y_H.i.s');
         return Excel::download(new KomputerExport, 'DataKomputer_'.$filename.'.xlsx');
+    }
+
+    public function pdf(){
+        $filename = now()->format('d-m-Y_H.i.s');
+        $data = array(
+            'komputer' => Komputer::get(),
+            'tanggal'   => now()->format('d-m-Y'),
+            'jam'       => now()->format('H.i.s'),
+        );
+
+        $pdf = Pdf::loadView('admin.komputer.pdf', $data);
+        return $pdf->setPaper('a3', 'landscape')->stream('DataKomputer_'.$filename.'.pdf');
     }
     
 }

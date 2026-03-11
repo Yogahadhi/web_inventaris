@@ -1,7 +1,7 @@
 <table>
     <thead>
         <tr>
-            <th colspan="4" align="center">Data User</th> 
+            <th colspan="4" align="center">Laporan Data User</th> 
         </tr> 
         <tr>
             <th colspan="4" align="center">Dicetak pada tanggal: {{ $tanggal }}</th> 

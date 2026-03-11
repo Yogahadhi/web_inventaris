@@ -75,7 +75,7 @@ Route::middleware('checkLogin')->group(function () {
     //LaporanExcel
     Route::get('laporan/excel',[LaporanController::class,'excel'])->
     name('laporanExcel');
-    //UserPDF
+    //LaporanPDF
     Route::get('laporan/pdf',[LaporanController::class,'pdf'])->
     name('laporanPdf');
 
@@ -100,6 +100,9 @@ Route::middleware('checkLogin')->group(function () {
     //KomputerExcel
     Route::get('komputer/excel',[DataKomputer::class,'excel'])->
     name('komputerExcel');
+    //KomputerPDF
+    Route::get('komputer/pdf',[DataKomputer::class,'pdf'])->
+    name('komputerPdf');
 
     //Stock Opname
     Route::get('stock-opname',[StockOpname::class,'index'])->

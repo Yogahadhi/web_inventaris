@@ -1,4 +1,4 @@
-<h3 align="center">Data User</h3>
+<h2 style="text-align:center;">LAPORAN DATA USER</h2>
 <h3 align="center">Dicetak pada tanggal: {{ $tanggal }}</h3>
 <h3 align="center">Pukul: {{ $jam }}</h3>
 <hr>

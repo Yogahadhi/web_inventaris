@@ -1,7 +1,7 @@
 <table>
     <thead>
         <tr>
-            <th colspan="13" align="center">Data Spesifikasi Lengkap Komputer</th> 
+            <th colspan="13" align="center">Laporan Data Spesifikasi Komputer</th> 
         </tr> 
         <tr>
             <th colspan="13" align="center">Dicetak pada tanggal: {{ $tanggal }}</th> 

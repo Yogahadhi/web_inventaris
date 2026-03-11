@@ -1,4 +1,4 @@
-<h3 align="center">Data Laporan Inventaris</h3>
+<h2 style="text-align:center;">LAPORAN DATA INVENTARIS</h2>
 <h3 align="center">Dicetak pada tanggal: {{ $tanggal }}</h3>
 <h3 align="center">Pukul: {{ $jam }}</h3>
 <hr>
@@ -34,5 +34,5 @@
                 <td align="center">{{ $item->keterangan }}</td>
             </tr>
         @endforeach
-    </tbod>
+    </tbody>
 </table>
