@@ -97,6 +97,9 @@ Route::middleware('checkLogin')->group(function () {
     //KomputerDelete
     Route::delete('komputer/destroy/{id}',[DataKomputer::class,'destroy'])->
     name('komputerDestroy');
+    //KomputerExcel
+    Route::get('komputer/excel',[DataKomputer::class,'excel'])->
+    name('komputerExcel');
 
     //Stock Opname
     Route::get('stock-opname',[StockOpname::class,'index'])->

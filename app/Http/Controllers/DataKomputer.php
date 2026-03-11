@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\KomputerExport;
 use App\Models\Komputer;
 use App\Models\Laporan;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
 
 class DataKomputer extends Controller
 {
@@ -187,6 +189,12 @@ class DataKomputer extends Controller
         $komputer->delete();
 
         return redirect()->route('komputer')->with('success','Data komputer berhasil dihapus');
+    }
+
+    public function excel()
+    {
+        $filename = now()->format('d-m-Y_H.i.s');
+        return Excel::download(new KomputerExport, 'DataKomputer_'.$filename.'.xlsx');
     }
     
 }
