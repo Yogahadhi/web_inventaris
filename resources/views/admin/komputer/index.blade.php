@@ -78,13 +78,15 @@
                                 <td>{{ $item->motherboard }}</td>
                                 <td>{{ $item->psu }}</td>
                                 <td>{{ $item->sistem_operasi }}</td>
-                                <td>
+                                <td class="text-center">
                                     @if ($item->kondisi == 'Layak Pakai')
                                         <span class="badge badge-success">
                                             {{ $item->kondisi }}
+                                        </span>
                                     @elseif ($item->kondisi == 'Perlu Perbaikan') 
                                         <span class="badge badge-warning">
                                             {{ $item->kondisi }}
+                                        </span>
                                     @else
                                         <span class="badge badge-danger">
                                             {{ $item->kondisi }}
@@ -96,7 +98,7 @@
                                     <span class="badge badge-primary">
                                         {{ $item->tanggal }}</span>
                                 </td>
-                                <td>
+                                <td class="text-center">
                                     @if ($item->user->jenis_akun == 'Admin')
                                         <span class="badge badge-dark">
                                             {{ $item->user->name }} - {{ $item->user->jenis_akun }}</span>

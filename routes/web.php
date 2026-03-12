@@ -7,6 +7,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\LaporanController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\StockOpnameController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -105,7 +106,7 @@ Route::middleware('checkLogin')->group(function () {
     name('komputerPdf');
 
     //Stock Opname
-    Route::get('stock-opname',[StockOpname::class,'index'])->
+    Route::get('stock-opname',[StockOpnameController::class,'index'])->
     name('stock-opname');
 });
 

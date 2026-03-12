@@ -31,6 +31,10 @@ class User extends Authenticatable
     public function komputer(){
         return $this->hasMany(Komputer::class);
     }
+
+    public function stockOpname(){
+        return $this->hasMany(StockOpname::class);
+    }
     
     /**
      * The attributes that should be hidden for serialization.

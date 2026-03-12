@@ -37,26 +37,60 @@
                             <th>Kategori</th>
                             <th>Nama Barang</th>
                             <th>Jumlah Barang</th>
-                            <th>lokasi</th>
+                            <th>Lokasi</th>
                             <th>Tanggal Pengecekan</th>
                             <th>Kondisi</th>
+                            <th>Petugas</th>
                             <th>Keterangan</th>
+                            <th>
+                                <i class="fas fa-cog"></i>
+                            </th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th class="text-center">1</th>
-                            <td>Map</td>
-                            <td>Map Plastik Kuning</td>
-                            <td class="text-center">10</td>
-                            <td>Ruang Perakitan</td>
-                            <td>1/9/2026</td>
-                            <td class="text-center">
-                                <span class="badge badge-success badge-pill">Baik
-                                </span>
-                            </td>
-                            <td>Terdapat di lemari ruang perakitan</td>
-                        </tr>          
+                        @foreach ($stockopname as $item)
+                            <tr>
+                                <td class="text-center">{{ $loop->iteration }}</td>
+                                <td>{{ $item->kategori }}</td>
+                                <td>{{ $item->nama }}</td>
+                                <td class="text-center">{{ $item->jumlah }}</td>
+                                <td>{{ $item->lokasi }}</td>
+                                <td>{{ $item->tanggal}}</td>
+                                <td class="text-center">
+                                    @if ($item->kondisi == 'Baik')
+                                        <span class="badge badge-success">
+                                            {{ $item->kondisi }}</span>
+                                    @elseif ($item->kondisi == 'Perlu Pengecekan') 
+                                        <span class="badge badge-warning">
+                                            {{ $item->kondisi }}</span>
+                                    @else
+                                        <span class="badge badge-danger">
+                                            {{ $item->kondisi }}</span>
+                                    @endif                                   
+                                </td>
+                                <td class="text-center">
+                                    @if ($item->user->jenis_akun == 'Admin')
+                                        <span class="badge badge-dark">
+                                            {{ $item->user->name }} - {{ $item->user->jenis_akun }}</span>
+                                    @else 
+                                        <span class="badge badge-info">
+                                            {{ $item->user->name }} - {{ $item->user->jenis_akun }}</span>
+                                    @endif
+                                </td>
+                                <td>{{ $item->keterangan }}</td>
+
+                                <td class="text-center">
+                                    <a href="{{ route('laporanEdit', $item->id) }}" 
+                                        class="btn btn-warning btn-sm">
+                                        <i class="fas fa-edit"></i>
+                                    </a>
+                                    <button class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modalLaporanDestroy{{ $item->id }}">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </button>
+                                    @include('admin.laporan.modal')
+                                </td>
+                            </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>

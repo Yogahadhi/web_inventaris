@@ -81,7 +81,7 @@
                                 </td>
                                 <td>{{ $item->merek }}</td>
                                 <td>{{ $item->model }}</td>
-                                <td>
+                                <td class="text-center">
                                     @if ($item->kondisi == 'Layak Pakai')
                                         <span class="badge badge-success">
                                             {{ $item->kondisi }}</span>
@@ -98,7 +98,7 @@
                                     <span class="badge badge-primary">
                                         {{ $item->tanggal }}</span>
                                 </td>
-                                <td>
+                                <td class="text-center">
                                     @if ($item->user->jenis_akun == 'Admin')
                                         <span class="badge badge-dark">
                                             {{ $item->user->name }} - {{ $item->user->jenis_akun }}</span>
