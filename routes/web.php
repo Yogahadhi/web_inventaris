@@ -108,6 +108,13 @@ Route::middleware('checkLogin')->group(function () {
     //Stock Opname
     Route::get('stock-opname',[StockOpnameController::class,'index'])->
     name('stock-opname');
+   //StockOpnameCreate
+    Route::get('stock-opname/create',[StockOpnameController::class,'create'])->
+    name('stockopnameCreate');
+   //StockOpnameStore
+    Route::post('stock-opname/store',[StockOpnameController::class,'store'])->
+    name('stockopnameStore');
 });
 
 
+  
