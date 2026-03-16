@@ -4,7 +4,7 @@
 
     <!-- Page Heading -->
     <h1 class="h3 mb-4 text-gray-800">
-        <i class="fas fa-plus mr-2"></i>
+        <i class="fas fa-editmr-2"></i>
         {{ $title }}
     </h1>
 
