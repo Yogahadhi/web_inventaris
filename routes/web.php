@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\StockOpname;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DataKomputer;
 use App\Http\Controllers\AuthController;
@@ -119,7 +118,10 @@ Route::middleware('checkLogin')->group(function () {
     name('stockopnameEdit');
     //StockOpnameUpdate
     Route::post('stock-opname/update/{id}',[StockOpnameController::class,'update'])->
-    name('stockopnameUpdate');   
+    name('stockopnameUpdate');
+    //StockOpnameDelete
+    Route::delete('stock-opname/destroy/{id}',[StockOpnameController::class,'destroy'])->
+    name('stockopnameDestroy');   
 });
 
 

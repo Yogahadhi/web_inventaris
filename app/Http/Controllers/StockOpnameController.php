@@ -110,4 +110,11 @@ class StockOpnameController extends Controller
 
         return redirect()->route('stock-opname')->with('success','Data stock opname berhasil diubah');
     }
+
+    public function destroy($id){
+        $stockopname = StockOpname::findOrFail($id);
+        $stockopname->delete();
+
+        return redirect()->route('stock-opname')->with('success','Data stock opname berhasil dihapus');
+    }
 }
