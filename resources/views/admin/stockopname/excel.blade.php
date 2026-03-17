@@ -1,22 +1,19 @@
 <table>
     <thead>
         <tr>
-            <th colspan="11" align="center">Laporan Data Inventaris</th> 
+            <th colspan="8" align="center">Laporan Data Stock Opname</th> 
         </tr> 
         <tr>
-            <th colspan="11" align="center">Dicetak pada tanggal: {{ $tanggal }}</th> 
+            <th colspan="8" align="center">Dicetak pada tanggal: {{ $tanggal }}</th> 
         </tr> 
         <tr>
-            <th colspan="11" align="center">Pukul: {{ $jam }}</th> 
+            <th colspan="8" align="center">Pukul: {{ $jam }}</th> 
         </tr> 
         <tr>
             <th width="10" align="center">No</th>
-            <th width="20" align="center">ID Perangkat</th>
-            <th width="30" align="center">Nama Perangkat</th>
             <th width="20" align="center">Kategori</th>
-            <th width="20" align="center">Merek</th>
-            <th width="20" align="center">Model</th>
-            <th width="20" align="center">Kondisi</th>
+            <th width="30" align="center">Nama</th>
+            <th width="20" align="center">Jumlah</th>
             <th width="20" align="center">Lokasi</th>
             <th width="20" align="center">Tanggal Pengecekan</th>
             <th width="20" align="center">Petugas</th>
@@ -24,15 +21,12 @@
         </tr>
     </thead>
     <tbody>
-        @foreach ($laporan as $item)
+        @foreach ($stockopname as $item)
             <tr>
                 <td align="center">{{ $loop->iteration }}</td>
-                <td>{{ $item->id_perangkat }}</td>
-                <td>{{ $item->nama }}</td>
                 <td>{{ $item->kategori }}</td>
-                <td>{{ $item->merek }}</td>
-                <td>{{ $item->model }}</td>
-                <td>{{ $item->kondisi }}</td>
+                <td>{{ $item->nama }}</td>
+                <td align="center">{{ $item->jumlah }}</td>
                 <td>{{ $item->lokasi }}</td>
                 <td>{{ $item->tanggal }}</td>
                 <td>{{ $item->user->name }} - {{ $item->user->jenis_akun }}</td>

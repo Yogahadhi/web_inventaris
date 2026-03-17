@@ -17,12 +17,12 @@
                 </a>
             </div>
             <div>
-                <a href="#" class="btn btn-success btn-sm">
+                <a href="{{ route('stockopnameExcel') }}" class="btn btn-success btn-sm">
                     <i class="fas fa-file-excel mr-2"></i>
                     Excel
                 </a>
 
-                <a href="#" class="btn btn-danger btn-sm">
+                <a href="{{ route('stockopnamePdf') }}" class="btn btn-danger btn-sm" target='__blank'>
                     <i class="fas fa-file-pdf mr-2"></i>
                     PDF
                 </a>

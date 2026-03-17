@@ -47,7 +47,7 @@
                 <td align="center">{{ $item->kondisi }}</td>
                 <td align="center">{{ $item->status_teknis }}</td>
                 <td align="center">{{ $item->tanggal }}</td>
-                <td align="center">{{ $item->user->name }}</td>
+                <td align="center">{{ $item->user->name }} - {{ $item->user->jenis_akun }}</td>
             </tr>
         @endforeach
     </tbody>

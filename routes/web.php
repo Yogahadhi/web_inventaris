@@ -121,7 +121,13 @@ Route::middleware('checkLogin')->group(function () {
     name('stockopnameUpdate');
     //StockOpnameDelete
     Route::delete('stock-opname/destroy/{id}',[StockOpnameController::class,'destroy'])->
-    name('stockopnameDestroy');   
+    name('stockopnameDestroy');
+    //StockOpnameExcel
+    Route::get('stock-opname/excel',[StockOpnameController::class,'excel'])->
+    name('stockopnameExcel');
+    //KomputerPDF
+    Route::get('stock-opname/pdf',[StockOpnameController::class,'pdf'])->
+    name('stockopnamePdf');   
 });
 
 

@@ -1,13 +1,13 @@
 <table>
     <thead>
         <tr>
-            <th colspan="13" align="center">Laporan Data Spesifikasi Komputer</th> 
+            <th colspan="22" align="center">Laporan Data Spesifikasi Komputer</th> 
         </tr> 
         <tr>
-            <th colspan="13" align="center">Dicetak pada tanggal: {{ $tanggal }}</th> 
+            <th colspan="22" align="center">Dicetak pada tanggal: {{ $tanggal }}</th> 
         </tr> 
         <tr>
-            <th colspan="13" align="center">Pukul: {{ $jam }}</th> 
+            <th colspan="22" align="center">Pukul: {{ $jam }}</th> 
         </tr> 
         <tr>
             <th width="10" align="center">No</th>
@@ -55,7 +55,7 @@
                 <td>{{ $item->kondisi }}</td>
                 <td>{{ $item->status_teknis }}</td>
                 <td>{{ $item->tanggal }}</td>
-                <td>{{ $item->user->name }}</td>
+                <td>{{ $item->user->name }} - {{ $item->user->jenis_akun }}</td>
                 <td>{{ $item->keterangan }}</td>
                 <td>{{ $item->fungsi_print }}</td>
                 <td>{{ $item->kemampuan_desain }}</td>

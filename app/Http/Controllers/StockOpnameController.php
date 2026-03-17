@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\StockExport;
 use App\Models\StockOpname;
 use App\Models\User;
+use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
 
 class StockOpnameController extends Controller
 {
@@ -116,5 +119,23 @@ class StockOpnameController extends Controller
         $stockopname->delete();
 
         return redirect()->route('stock-opname')->with('success','Data stock opname berhasil dihapus');
+    }
+
+    public function excel()
+    {
+        $filename = now()->format('d-m-Y_H.i.s');
+        return Excel::download(new StockExport, 'DataStockOpname_'.$filename.'.xlsx');
+    }
+
+    public function pdf(){
+        $filename = now()->format('d-m-Y_H.i.s');
+        $data = array(
+            'stockopname' => StockOpname::get(),
+            'tanggal'   => now()->format('d-m-Y'),
+            'jam'       => now()->format('H.i.s'),
+        );
+
+        $pdf = Pdf::loadView('admin.stockopname.pdf', $data);
+        return $pdf->setPaper('a4', 'landscape')->stream('DataStockOpname_'.$filename.'.pdf');
     }
 }
