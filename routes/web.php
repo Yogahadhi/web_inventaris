@@ -30,33 +30,31 @@ Route::middleware('checkLogin')->group(function () {
     name('dashboard');
 
     Route::middleware('isAdmin')->group(function () {
-
+        //User
+        Route::get('user',[UserController::class,'index'])->
+        name('user');
+        //UserCreate
+        Route::get('user/create',[UserController::class,'create'])->
+        name('userCreate');
+        //UserStore
+        Route::post('user/store',[UserController::class,'store'])->
+        name('userStore');
+        //UserEdit
+        Route::get('user/edit/{id}',[UserController::class,'edit'])->
+        name('userEdit');
+        //UserUpdate
+        Route::post('user/update/{id}',[UserController::class,'update'])->
+        name('userUpdate');
+        //UserDelete
+        Route::delete('user/destroy/{id}',[UserController::class,'destroy'])->
+        name('userDestroy');
+        //UserExcel
+        Route::get('user/excel',[UserController::class,'excel'])->
+        name('userExcel');
+        //UserPDF
+        Route::get('user/pdf',[UserController::class,'pdf'])->
+        name('userPdf');
     });
-
-    //User
-    Route::get('user',[UserController::class,'index'])->
-    name('user');
-    //UserCreate
-    Route::get('user/create',[UserController::class,'create'])->
-    name('userCreate');
-    //UserStore
-    Route::post('user/store',[UserController::class,'store'])->
-    name('userStore');
-    //UserEdit
-    Route::get('user/edit/{id}',[UserController::class,'edit'])->
-    name('userEdit');
-    //UserUpdate
-    Route::post('user/update/{id}',[UserController::class,'update'])->
-    name('userUpdate');
-    //UserDelete
-    Route::delete('user/destroy/{id}',[UserController::class,'destroy'])->
-    name('userDestroy');
-    //UserExcel
-    Route::get('user/excel',[UserController::class,'excel'])->
-    name('userExcel');
-    //UserPDF
-    Route::get('user/pdf',[UserController::class,'pdf'])->
-    name('userPdf');
 
     //Laporan
     Route::get('laporan',[LaporanController::class,'index'])->

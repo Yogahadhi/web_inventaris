@@ -16,9 +16,9 @@ class isAdmin
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if (Auth::user() && Auth::user()->jenis_akun == 'Admin') {
+        if (Auth::check() && Auth::user()->jenis_akun == 'Admin') {
             return $next($request);
-    }   else{
+        } else {
             return redirect()->route('dashboard')->with('error', 'Anda Tidak Memiliki Akses Admin');
         }
     }
