@@ -24,11 +24,14 @@ name('loginProses');
 Route::get('logout',[AuthController::class,'logout'])->
 name('logout');
 
-
 Route::middleware('checkLogin')->group(function () {
     //Dashboard
     Route::get('dashboard',[DashboardController::class,'index'])->
     name('dashboard');
+
+    Route::middleware('isAdmin')->group(function () {
+
+    });
 
     //User
     Route::get('user',[UserController::class,'index'])->
