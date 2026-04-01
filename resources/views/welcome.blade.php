@@ -52,7 +52,11 @@
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <a class="btn-getstarted" href="{{ route ('login') }}">Login</a>
+      @auth
+        <a class="btn-getstarted" href="{{ route ('login') }}">Dashboard</a>
+      @else
+        <a class="btn-getstarted" href="{{ route ('login') }}">Login</a>
+      @endauth
 
     </div>
   </header>
@@ -68,7 +72,11 @@
             <h1>INVENTIK BBPVP MAKASSAR</h1>
             <p>Website Sistem Inventaris Kejuruan TIK</p>
             <div class="d-flex">
-              <a href="{{ route('login') }}" class="btn-get-started">Login</a>
+              @auth()
+                <a href="{{ route('login') }}" class="btn-get-started">Dashboard</a>
+              @else
+                <a href="{{ route('login') }}" class="btn-get-started">Login</a>
+              @endauth
             </div>
           </div>
           <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="100">

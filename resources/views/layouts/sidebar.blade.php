@@ -2,7 +2,7 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('welcome') }}">
                 <div class="sidebar-brand-icon">
                     <i class="fas fa-archive"></i>
                 </div>
@@ -22,20 +22,24 @@
             <!-- Divider -->
             <hr class="sidebar-divider">
 
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                MENU ADMIN
-            </div>
+            @if (auth()->check() && auth()->user()->jenis_akun == 'Admin')
+               
+                <!-- Heading -->
+                <div class="sidebar-heading">
+                    MENU ADMIN
+                </div>
 
-            <!-- Nav Item - Tables -->
-            <li class="nav-item {{ $menuAdminUser ?? '' }}">
-                <a class="nav-link" href="{{ route('user') }}">
-                    <i class="fas fa-users"></i>
-                    <span>Data Pengguna</span></a>
-            </li>
+                <!-- Nav Item - Tables -->
+                <li class="nav-item {{ $menuAdminUser ?? '' }}">
+                    <a class="nav-link" href="{{ route('user') }}">
+                        <i class="fas fa-users"></i>
+                        <span>Data Pengguna</span></a>
+                </li>
 
-            <!-- Divider -->
-            <hr class="sidebar-divider">
+                <!-- Divider -->
+                <hr class="sidebar-divider">
+               
+            @endif
 
             <!-- Heading -->
             <div class="sidebar-heading">

@@ -14,11 +14,13 @@ Route::get('/', function () {
 name('welcome');
 ;
 
-//Login
-Route::get('login',[AuthController::class,'login'])->
-name('login');
-Route::post('login',[AuthController::class,'loginProses'])->
-name('loginProses');
+Route::middleware('isLogin')->group(function () {
+    //Login
+    Route::get('login',[AuthController::class,'login'])->
+    name('login');
+    Route::post('login',[AuthController::class,'loginProses'])->
+    name('loginProses');
+});
 
 //Logout
 Route::get('logout',[AuthController::class,'logout'])->
