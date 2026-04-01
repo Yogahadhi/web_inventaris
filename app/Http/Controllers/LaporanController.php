@@ -15,7 +15,7 @@ class LaporanController extends Controller
     {
         $data = array(
             'title'         => 'Data Laporan',
-            'menuAdminLaporan' => 'active',
+            'menuLaporan' => 'active',
             'laporan'          => Laporan::with('user')->get(),    
         );
         return view('admin.laporan.index',$data);
@@ -25,7 +25,7 @@ class LaporanController extends Controller
     {
         $data = array(
             'title'         => 'Tambah Data Laporan',
-            'menuAdminLaporan' => 'active',
+            'menuLaporan' => 'active',
             'user'          => User::get(),
         );
         return view('admin.laporan.create',$data);
