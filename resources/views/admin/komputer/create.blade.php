@@ -256,7 +256,7 @@
                 <div class="row mb-2">
                     <div class="col-xl-6 mb-2">
                         <label class="form-label">
-                            <span class="text-danger">*</span>
+                            
                             Keterangan :
                         </label>
                         <textarea name="keterangan" rows="3" class="form-control @error('keterangan') is-invalid @enderror">{{ old('keterangan') }}</textarea>
@@ -266,7 +266,7 @@
                     </div>
                     <div class="col-xl-6">
                         <label class="form-label">
-                            <span class="text-danger">*</span>
+                            
                             Fungsi Print :
                         </label>
                         <textarea name="fungsi_print" rows="3" class="form-control @error('fungsi_print') is-invalid @enderror">{{ old('fungsi_print') }}</textarea>
@@ -278,7 +278,7 @@
                 <div class="row mb-2">
                     <div class="col-xl-6 mb-2">
                         <label class="form-label">
-                            <span class="text-danger">*</span>
+                            
                             Kemampuan Desain :
                         </label>
                         <textarea name="desain" rows="3" class="form-control @error('desain') is-invalid @enderror">{{ old('desain') }}</textarea>

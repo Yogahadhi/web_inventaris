@@ -140,7 +140,6 @@
                     </div>
                     <div class="col-xl-6">
                         <label class="form-label">
-                            <span class="text-danger">*</span>
                             Keterangan :
                         </label>
                         <textarea name="keterangan" rows="3" class="form-control @error('keterangan') is-invalid @enderror">{{ old('keterangan') }}</textarea>
