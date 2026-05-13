@@ -14,7 +14,7 @@ class StockOpnameController extends Controller
     public function index()
     {
         $data = array(
-            'title'             => 'Stock Opname',
+            'title'             => 'Stok Opname',
             'menuStockOpname'   => 'active',
             'stockopname'       => StockOpname::with('user')->get(),
         );
@@ -23,7 +23,7 @@ class StockOpnameController extends Controller
 
     public function create(){
         $data = array(
-            'title'           => 'Tambah Data Stock Opname',
+            'title'           => 'Tambah Data Stok Opname',
             'menuStockOpname' => 'active',
             'user'            => User::get(),
         );
@@ -64,12 +64,12 @@ class StockOpnameController extends Controller
 
         $stockopname->save();
 
-        return redirect()->route('stock-opname')->with('success','Data stock opname berhasil ditambahkan');
+        return redirect()->route('stock-opname')->with('success','Data stok opname berhasil ditambahkan');
     }
 
     public function edit($id){
         $data = array(
-            'title'           => 'Edit Data Stock Opname',
+            'title'           => 'Edit Data Stok Opname',
             'menuStockOpname' => 'active',
             'user'            => User::get(),
             'stockopname'     => StockOpname::with('user')->findOrFail($id),
@@ -111,14 +111,14 @@ class StockOpnameController extends Controller
 
         $stockopname->save();
 
-        return redirect()->route('stock-opname')->with('success','Data stock opname berhasil diubah');
+        return redirect()->route('stock-opname')->with('success','Data stok opname berhasil diubah');
     }
 
     public function destroy($id){
         $stockopname = StockOpname::findOrFail($id);
         $stockopname->delete();
 
-        return redirect()->route('stock-opname')->with('success','Data stock opname berhasil dihapus');
+        return redirect()->route('stock-opname')->with('success','Data stok opname berhasil dihapus');
     }
 
     public function excel()

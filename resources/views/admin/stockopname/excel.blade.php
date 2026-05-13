@@ -1,7 +1,7 @@
 <table>
     <thead>
         <tr>
-            <th colspan="8" align="center">Laporan Data Stock Opname</th> 
+            <th colspan="8" align="center">Laporan Data Stok Opname</th> 
         </tr> 
         <tr>
             <th colspan="8" align="center">Dicetak pada tanggal: {{ $tanggal }}</th> 
